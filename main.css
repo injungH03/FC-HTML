@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background: white;
+    border-bottom:  1px solid lightgray;
+}
+.container {
+    /* background: tomato; */
+    width: 980px;
+    margin: auto;
+}
+.container-left {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.logo {
+    float: left;
+    margin-right: 5px;
+}
+/* logo class 하위요소인 img 태그에만 적용 */
+.logo img {
+    display: block;
+}
+.menu {
+    float: left;
+}
+.menu-item {
+    float: left;
+    /* margin-right: 10px; */
+    padding: 8px 10px;
+    /* 
+    위의  padding: 8px 10px; 는 아래와 같다.
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px; */
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
