@@ -14,7 +14,7 @@ https://developer.mozilla.org/ko/docs/Web/HTML/Element/main
 https://heropy.blog/2019/05/26/html-elements/
 
 
-
+```
 <article>
 독립적으로 구분되거나 재사용 가능한 영역을 설정.
 (매거진/신문 기사, 블로그 등)
@@ -28,8 +28,8 @@ Ex)
         <h2>03 March 2018</h2>
         <p>Rain.</p>
     </article>
-
-
+```
+```
 <section>
 문서의 일반적인 영역을 설정.
 일반적으로 <h1>~<h6>를 포함하여 식별.
@@ -49,3 +49,4 @@ div  의미 X
 (보통 광고나 기타 링크 등의 사이드바(Side bar)를 설정)
 aside { display: block; }
 Ex)
+```
