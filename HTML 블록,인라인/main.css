@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* div {
+    background: red;
+    width: 100px;
+    height: 30px;
+    margin: 20px;
+    padding: 20px ;
+} */
+
+/* span {
+    width: 100px;
+    height: 30px;
+    margin: 20px;
+    padding: 20px ;
+} */
+    
+
+
+
+span {
+    background: red;
+    width: 120px;
+    height: 80px;
+    display: block; /* 인라인 요소를 블럭 요소로 바꾼다. */
+} 
+
+div {
+    background: yellow;
+    width: 120px;
+    height: 80px;
+    display: inline; /* 블럭요소를 인라인 요소로 바꾼다. */
+}
+
+
+
