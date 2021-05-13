@@ -51,3 +51,4 @@ div  의미 X
 aside { display: block; }
 Ex)
 스크린샷 2021-05-13 오후 5.12.51![image](https://user-images.githubusercontent.com/71302348/118098314-b4281680-b40e-11eb-9491-e7056dee9401.png)
+<img src="(https://user-images.githubusercontent.com/71302348/118098314-b4281680-b40e-11eb-9491-e7056dee9401.png)">
