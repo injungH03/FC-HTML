@@ -50,12 +50,6 @@ div  의미 X
 (보통 광고나 기타 링크 등의 사이드바(Side bar)를 설정)
 aside { display: block; }
 Ex)
-<<<<<<< HEAD
 ```
-=======
-스크린샷 2021-05-13 오후 5.12.51![image](https://user-images.githubusercontent.com/71302348/118098314-b4281680-b40e-11eb-9491-e7056dee9401.png)
-<<<<<<< HEAD
->>>>>>> 62aa098dac72bbffe7e1a3cc055b292ad0ff0e8b
-=======
 <img src="(https://user-images.githubusercontent.com/71302348/118098314-b4281680-b40e-11eb-9491-e7056dee9401.png)">
->>>>>>> e5b002c050769ea964af20227c93060d3d1aeb2b
+
