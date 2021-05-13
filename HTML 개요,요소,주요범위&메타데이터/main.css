@@ -3,7 +3,10 @@ body {
     padding: 0;
 }
 
-span {
+div {
     background: red;
-    height: 20px;
+    width: 100px;
+    height: 30px;
+    margin: 20px;
+    padding: 20px ;
 }
