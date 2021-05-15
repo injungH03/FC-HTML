@@ -1,0 +1,18 @@
+a { 
+    font-weight: bold;
+    width: 100px;
+    line-height: 40px;
+    height: 40px;
+    border:  1px solid black;
+    border-radius: 7px;
+    /* 모서리를 둥글게 */
+    display: block;
+    /* a 테그는 인라인 속성이기 때문에 버튼형식으로 꾸며주려면 블럭 처리해야함 */
+    text-align: center;
+
+}
+
+/* 마우스 커서를 올렸을 때 */
+a:hover {
+    background: orange;
+}
