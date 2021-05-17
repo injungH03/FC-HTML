@@ -1,0 +1,9 @@
+b {
+    font-weight: normal;
+}
+em {
+    /* 기본은 italic 체 */
+    font-style: normal;
+    font-weight: bold;
+    color: palegoldenrod;
+}
