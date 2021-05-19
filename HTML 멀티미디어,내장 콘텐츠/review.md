@@ -2,7 +2,7 @@
 <img />
 이미지를 삽입.
 ```
-<img src="./img/img1.png" width= "450px" height="250px" title="스크린샷 크기 설정" alt="screenshot"></img>
+<img src="./img/img1.png" width= "550px" title="스크린샷 크기 설정" alt="screenshot"></img>
 
 ```
 img { display: inline; }
@@ -41,10 +41,8 @@ srcset 속성은 쉼표(,)로 구분된 사용할 이미지들의 경로와 해�
 sizes 속성은 쉼표(,)로 구분된 미디어조건(선택적)과 그에 따라 최적화되어 출력될 이미지 크기를 지정합니다.
 ```
 
-[HTML IMG의 srcset과 sizes 속성](https://heropy.blog/2019/06/16/html-img-srcset-and-sizes")
+[HTML IMG의 srcset과 sizes 속성-출처](https://heropy.blog/2019/06/16/html-img-srcset-and-sizes")
 ```
-
-
 일반적으로 반응형 웹에서 이미지를 지원하기 위해, ‘미디어쿼리’라고 부르는 CSS Media Rule(@media)에서 background-image 속성을 많이 사용하는데, 
 반응형 이미지를 처리하기 위해 뷰포트(Viewport)의 크기부터 사용자 화면의 해상도 등 많은 환경을 고려해야 한다.
 하지만 우리는 HTML IMG의 srcset과 sizes를 통해 쉽게는 이미지의 크기를 설정하는 것만으로 대부분의 고려 사항을 사용자 브라우저(User agent)에 떠넘길 수 있다.
@@ -220,4 +218,44 @@ sizes와 width를 같이 작성할 경우 width가 우선합니다.
 
 개념이 이해되었다면, 다음과 같이 여러 조건을 작성할 수도 있습니다.
 쉼표(,)를 사용해 구분한다는 것을 주의하세요.
+
+<imgㅠsrcset="images/heropy_small.png 400w,
+          images/heropy_medium.png 700w,
+          images/heropy_large.png 1000w"
+  sizes="(min-width: 701px) 1000px,
+         (min-width: 401px) 700px,
+         400px"
+  src="images/heropy.png"
+  alt="HEROPY" />
+
+
+srcset과 sizes는 IE를 지원하지 않습니다.
+
+https://caniuse.com/#feat=srcset
 ```
+
+
+
+
+
+
+```
+<audio>
+소리 콘텐츠(MP3)를 삽입.
+
+autoplay가 지정된 경우, preload는 무시됨.
+
+audio { display: inline; }
+
+Ex)
+<figure>
+    <figcaption>Listen to the T-Rex:</figcaption>
+    <audio
+        controls
+        src="/media/cc0-audio/t-rex-roar.mp3">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+</figure>
+```
+<img src="./img/audio.png" title="예제" alt="screenshot"></img>
