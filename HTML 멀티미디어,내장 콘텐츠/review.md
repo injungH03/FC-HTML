@@ -64,7 +64,8 @@ w 디스크립터(Width descriptor)는 이미지의 원본 크기(가로 너비)
 예를 들어 400x300(px) 크기 이미지의 w 값은 400w입니다.
 
 브라우저(User agent)는 지정된 w 디스크립터를 통해 각 이미지의 최적화된 픽셀 밀도를 계산합니다.
-
+```
+```
 Ex)
 <img srcset="images/heropy_small.png 400w,
           images/heropy_medium.png 700w,
@@ -74,5 +75,41 @@ Ex)
 
 아래와 같이 단지 3장의 이미지와 그 크기만 srcset에 입력했을 뿐인데 브라우저는 각 이미지 중 현재 뷰포트 너비에 최적화된 이미지를 선택해 출력합니다.
 마치 다음의 CSS 미디어조건과 비슷합니다.
+
+CSS로 똑같은 효과를 주려면 아래와 같이 작성해야된다.
+.some-image {
+  width: 400px;
+  height: 400px;
+  background-image: url("images/heropy_small.png");   
+  background-repeat: no-repeat;
+}
+@media (min-width: 401px) {
+  .some-image {
+    width: 700px;
+    height: 700px;
+    background-image: url("images/heropy_medium.png");   
+  }
+}
+@media (min-width: 701px) {
+  .some-image {
+    width: 1000px;
+    height: 1000px;
+    background-image: url("images/heropy_large.png");   
+  }
+}
 ```
-<img src="./img/heropy.png" width= "450px" height="250px" title="예제" alt="screenshot"></img>
+<img src="./img/example_1.jpeg" title="예제" alt="screenshot"></img>
+
+```
+고정된 이미지 크기를 유지하려면 width 속성을 추가할 수 있습니다.
+(sizes 속성과는 다른 개념입니다!)
+
+<img
+  srcset="images/heropy_small.png 400w,
+          images/heropy_medium.png 700w,
+          images/heropy_large.png 1000w"
+  width="400"
+  src="images/heropy.png"
+  alt="HEROPY" />
+```
+<img src="./img/example_2.jpeg" title="예제" alt="screenshot"></img>
