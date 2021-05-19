@@ -2,7 +2,7 @@
 <img />
 이미지를 삽입.
 ```
-<img src="./img/img1.png" width= "550px" title="스크린샷 크기 설정" alt="screenshot"></img>
+<img src="./img/img1.png" width= "650px" title="스크린샷 크기 설정" alt="screenshot"></img>
 
 ```
 img { display: inline; }
@@ -258,4 +258,4 @@ Ex)
     </audio>
 </figure>
 ```
-<img src="./img/audio.png" title="예제" alt="screenshot"></img>
+<img src="./img/audio.png" width= "650px" title="예제" alt="screenshot"></img>
