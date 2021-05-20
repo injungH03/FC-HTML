@@ -298,7 +298,6 @@ iframe { display: inline; }
 <img src="./img/iframe.png" width= "650px" title="예제" alt="screenshot"></img>
 
 ```
-
 <canvas>
 Canvas API이나 WebGL API를 사용하여 그래픽이나 애니메이션을 랜더링.
 
@@ -306,7 +305,23 @@ canvas { display: inline; }
 
 width: 캔버스의 가로 너비
 height: 캔버스의 세로 너비
+```
 
+```
+<script>
+스크립트 코드를 문서에 포함하거나 참조(외부 스크립트).
 
+script { display: none; }
+```
+<img src="./img/script.png" width= "650px" title="예제" alt="screenshot"></img>
 
+```
+<noscript>
+스크립트를 지원하지 않는 경우에 삽입할 HTML을 정의.
+
+noscript { display: inline; }
+
+<noscript>
+  <p>Your browser does not support JavaScript!</p>
+</noscript>
 ```
