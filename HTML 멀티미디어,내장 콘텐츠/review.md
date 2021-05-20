@@ -259,3 +259,12 @@ Ex)
 </figure>
 ```
 <img src="./img/audio.png" width= "650px" title="예제" alt="screenshot"></img>
+
+```
+<video>
+동영상 콘텐츠(MP4)를 삽입.
+
+autoplay가 지정된 경우, preload는 무시됨.
+```
+<img src="./img/video.png" width= "650px" title="예제" alt="screenshot"></img>
+
