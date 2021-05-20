@@ -265,6 +265,48 @@ Ex)
 동영상 콘텐츠(MP4)를 삽입.
 
 autoplay가 지정된 경우, preload는 무시됨.
+
+video { display: inline; }
 ```
 <img src="./img/video.png" width= "650px" title="예제" alt="screenshot"></img>
 
+```
+<figure>, <figcaption>
+<figure>는 이미지나 삽화, 도표 등의 영역을 설정.
+<figcaption>는 <figure>에 포함되어 이미지나 삽화 등의 설명을 표시.(Figure Caption)
+
+figure { display: block; }
+figcation { display: inline; }
+
+
+<figure>
+  <img src="milk.jpg" alt="A milk">
+  <figcaption>Milk is a nutrient-rich, white liquid food produced by the mammary glands of mammals.</figcaption>
+</figure>
+```
+
+```
+<iframe>
+다른 HTML 페이지를 현재 페이지에 삽입.
+(중첩된 브라우저 컨텍스트(프레임)를 표시)
+
+iframe { display: inline; }
+
+
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/Q9yn1DpZkHQ" frameborder="0" allowfullscreen></iframe>
+```
+<img src="./img/iframe.png" width= "650px" title="예제" alt="screenshot"></img>
+
+```
+
+<canvas>
+Canvas API이나 WebGL API를 사용하여 그래픽이나 애니메이션을 랜더링.
+
+canvas { display: inline; }
+
+width: 캔버스의 가로 너비
+height: 캔버스의 세로 너비
+
+
+
+```
