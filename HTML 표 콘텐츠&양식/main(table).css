@@ -1,0 +1,15 @@
+/* 부모 요소 부터 차례대로 작성*/
+table {
+    /* 여백 줄이기 */
+    border-collapse: collapse;
+}
+td {
+    border: 1px solid yellowgreen;
+    padding: 10px;
+}
+th {
+    /* 글씨 굵기가 기본값으로 굵다 */
+    border: 1px solid yellowgreen;
+    padding: 10px;
+    background-color: lightgray;
+}

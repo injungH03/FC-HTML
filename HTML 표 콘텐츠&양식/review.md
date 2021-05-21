@@ -37,3 +37,30 @@ table { display: table; }
 tr { display: table-row; }
 th, td { display: table-cell; }
 ```
+
+   <table>
+        <!-- 3행 2열 -->
+        <tr>
+            <!-- th header 를 의미 -->
+            <th>타입</th>
+            <th>값</th>
+        </tr>
+        <tr>
+            <!-- td data 를 의미 -->
+            <td>알파벳</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>숫자</td>
+            <td>7</td>
+        </tr>
+    </table>
+
+
+
+
+```
+<th>
+‘머리글 칸’을 지정
+```
+<img src="./img(md)/th.png" width="650px" title="th img" alt="screenshot"></img>
