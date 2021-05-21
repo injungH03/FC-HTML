@@ -44,10 +44,10 @@ th, td { display: table-cell; }
 <img src="./img(md)/th.png" width="650px" title="th img" alt="screenshot"></img>
 
 
-```
-<td>
+
+<code><td></code>
 ‘일반 칸’을 지정
-```
+
 <table>
     <thead>
         <tr>
