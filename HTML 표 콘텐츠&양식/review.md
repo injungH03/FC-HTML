@@ -1,6 +1,6 @@
 표 콘텐츠
 
-```
+```HTML
 <table>
   <caption>Fruits</caption>
   <colgroup>
@@ -37,28 +37,6 @@ table { display: table; }
 tr { display: table-row; }
 th, td { display: table-cell; }
 ```
-
-   <table>
-        <!-- 3행 2열 -->
-        <tr>
-            <!-- th header 를 의미 -->
-            <th>타입</th>
-            <th>값</th>
-        </tr>
-        <tr>
-            <!-- td data 를 의미 -->
-            <td>알파벳</td>
-            <td>A</td>
-        </tr>
-        <tr>
-            <td>숫자</td>
-            <td>7</td>
-        </tr>
-    </table>
-
-
-
-
 ```
 <th>
 ‘머리글 칸’을 지정
