@@ -162,7 +162,7 @@ col { display: table-column; }
 
 <h3>
     <span> 
-    <pre><thead>,<tbody>,<tfoot>
+    <code>thead,tbody,tfoot</code>
     </span>
 </h3>
 
@@ -170,6 +170,3 @@ col { display: table-column; }
     표의머리글(thead),본문(tbody)
 </p>
 
-| Header One | Header Two | Header Three | Header Four |
-| ---------- | :--------- | :----------: | ----------: |
-| Default    | Left       | Center       | Right       |
