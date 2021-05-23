@@ -11,5 +11,5 @@ th {
     /* 글씨 굵기가 기본값으로 굵다 */
     border: 1px solid yellowgreen;
     padding: 10px;
-    background-color: lightgray;
+    /* background-color: lightgray; */
 }
