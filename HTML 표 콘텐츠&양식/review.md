@@ -162,11 +162,11 @@ col { display: table-column; }
 
 <h3>
     <span> 
-    <code>thead,tbody,tfoot</code>
+   \~<code>thead,tbody,tfoot</code>\~~
     </span>
 </h3>
 
 <p>
-    표의머리글(thead),본문(tbody)
+    표의머리글(thead),본문(tbody),바닥글(tfoot)을 지정.
 </p>
 
