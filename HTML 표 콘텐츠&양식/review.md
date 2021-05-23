@@ -84,3 +84,39 @@ th, td { display: table-cell; }
     </tbody>
 </table>
 
+
+```
+<caption>
+표의 제목을 설정.
+
+열리는 TABLE 태그 바로 다음에 작성해야 함.
+<table> 당 하나의 <caption>만 사용 가능.
+
+caption { display: table-caption; }
+```
+
+```HTML
+<table>
+    <caption>He-Man and Skeletor facts</caption>
+    <tr>
+        <td> </td>
+        <th scope="col" class="heman">He-Man</th>
+        <th scope="col" class="skeletor">Skeletor</th>
+    </tr>
+    <tr>
+        <th scope="row">Role</th>
+        <td>Hero</td>
+        <td>Villain</td>
+    </tr>
+    <tr>
+        <th scope="row">Weapon</th>
+        <td>Power Sword</td>
+        <td>Havoc Staff</td>
+    </tr>
+    <tr>
+        <th scope="row">Dark secret</th>
+        <td>Expert florist</td>
+        <td>Cries at romcoms</td>
+    </tr>
+</table>
+```
