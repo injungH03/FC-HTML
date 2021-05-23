@@ -149,3 +149,8 @@ col { display: table-column; }
         </tr>
     <tbody>
 </table>
+
+<h2>
+<span id=thead,tody,tfoot><thead>,<tody>,<tfoot>
+</span>
+</h2>
