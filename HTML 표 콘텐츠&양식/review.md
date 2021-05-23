@@ -28,6 +28,9 @@
   </tbody>
 </table>
 ```
+
+***
+
 ```
 <table>, <tr>, <th>, <td>
 데이터 표(<table>)의 행(줄 / <tr>)과 열(칸, 셀(Cell) / <th>, <td>)을 생성.
@@ -42,6 +45,8 @@ th, td { display: table-cell; }
 ‘머리글 칸’을 지정
 ```
 <img src="./img(md)/th.png" width="650px" title="th img" alt="screenshot"></img>
+
+***
 
 ```
 <td>
@@ -84,6 +89,7 @@ th, td { display: table-cell; }
     </tbody>
 </table>
 
+***
 
 ```
 <caption>
@@ -121,6 +127,8 @@ caption { display: table-caption; }
 </table>
 ```
 
+***
+
 ```
 <colgroup>, <col />
 표의 열들을 공통적으로 정의하는 컬럼(<col>)과 그의 집합(<colgroup>).
@@ -150,8 +158,10 @@ col { display: table-column; }
     <tbody>
 </table>
 
+***
+
 <h2>
     <span> 
-    <code>thead,tody,tfoot</code>
+    <code>thead,tbody,tfoot</code>
     </span>
 </h2>
