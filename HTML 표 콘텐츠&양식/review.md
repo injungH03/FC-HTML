@@ -162,6 +162,12 @@ col { display: table-column; }
 
 <h2>
     <span> 
-    <code>thead,tbody,tfoot</code>
+    ```
+    <thead>,<tbody>,<tfoot>
+    ```
     </span>
 </h2>
+
+<p>
+    표의머리글(thead),본문(tbody)
+</p>
