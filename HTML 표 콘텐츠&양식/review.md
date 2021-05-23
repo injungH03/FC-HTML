@@ -120,3 +120,29 @@ caption { display: table-caption; }
     </tr>
 </table>
 ```
+
+```
+<colgroup>, <col />
+표의 열들을 공통적으로 정의하는 컬럼(<col>)과 그의 집합(<colgroup>).
+(Column, Column Group)
+```
+<table>
+    <thead>
+        <tr>
+            <th>속성</th>
+            <th>의미</th>
+            <th>값</th>
+            <th>기본값</th>
+        </tr>    
+    <thead>
+    <tbody>
+        <tr>
+            <td>span</td>
+            <td>연속되는 열 수</td>
+            <td>숫자(Number)</td>
+            <td>
+                <code>1</code>
+            </td>
+        </tr>
+    <tbody>
+</table>
