@@ -151,6 +151,7 @@ col { display: table-column; }
 </table>
 
 <h2>
-<span id=thead,tody,tfoot> <code><thead>,<tody>,<tfoot></code>
-</span>
+    <span> 
+    <code>thead,tody,tfoot</code>
+    </span>
 </h2>
