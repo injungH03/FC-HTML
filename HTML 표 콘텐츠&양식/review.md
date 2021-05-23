@@ -162,7 +162,7 @@ col { display: table-column; }
 
 <h3>
     <span> 
-   \~<code>thead,tbody,tfoot</code>\~~
+    <code>thead,tbody,tfoot</code>
     </span>
 </h3>
 
@@ -170,3 +170,8 @@ col { display: table-column; }
     표의머리글(thead),본문(tbody),바닥글(tfoot)을 지정.
 </p>
 
+<ul>
+    <li>
+    "기본적으로 테이블의 레이아웃에 영향을 주지 않음"
+    </li>
+</ul>
