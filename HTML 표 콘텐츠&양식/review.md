@@ -125,6 +125,9 @@ caption { display: table-caption; }
 <colgroup>, <col />
 표의 열들을 공통적으로 정의하는 컬럼(<col>)과 그의 집합(<colgroup>).
 (Column, Column Group)
+
+colgroup { display: table-column-group; }
+col { display: table-column; }
 ```
 <table>
     <thead>
