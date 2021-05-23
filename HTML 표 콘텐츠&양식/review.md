@@ -160,14 +160,16 @@ col { display: table-column; }
 
 ***
 
-<h2>
+<h3>
     <span> 
-    ```
-    <thead>,<tbody>,<tfoot>
-    ```
+    <pre><thead>,<tbody>,<tfoot>
     </span>
-</h2>
+</h3>
 
 <p>
     표의머리글(thead),본문(tbody)
 </p>
+
+| Header One | Header Two | Header Three | Header Four |
+| ---------- | :--------- | :----------: | ----------: |
+| Default    | Left       | Center       | Right       |
