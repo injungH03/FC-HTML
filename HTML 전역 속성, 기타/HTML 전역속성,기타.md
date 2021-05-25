@@ -84,7 +84,9 @@ console.log($me.dataset.myAge); // &quot;851&quot;
 
 ***
 
-<img src="./img(Ex)/절대상대경로.png" width="650px" title="th img" alt="screenshot"></img>
+<img src="./img(Ex)/상대절대경로.png" width="550px" title="th img" alt="screenshot"></img>
+<img src="./img(Ex)/상대절대경로2.png" width="550px" title="th img" alt="screenshot"></img>
+<img src="./img(Ex)/상대절대경로3.png" width="550px" title="th img" alt="screenshot"></img>
 
 ***
 
