@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .section {
+            width: 100px;
+            color: red;
+            background: blue;
+        }
+
+        #section {
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- .section -->
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+
+    <!-- #section id는 고유하다 -->
+    <div id="section"></div>
+
+    <script>
+        const section = document.querySelector('.section')
+        const sectionId = document.getElementById('section')
+    </script>
+</body>
+</html>

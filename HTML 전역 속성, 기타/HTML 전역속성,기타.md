@@ -16,7 +16,7 @@
 ***
 
 <h2>style</span></h2>
-<p>요소에 적용할 CSS를 선언.</p>
+<p>요소에 적용할 CSS를 선언. 인라인 작성방식 </p>
 
 ***
 
@@ -81,6 +81,10 @@ console.log($me.dataset.myAge); // &quot;851&quot;
 
 <p><a href="https://developer.paciellogroup.com/blog/2014/08/using-the-tabindex-attribute/" target="_blank"
         rel="noopener">Using the tabindex attribute</a></p>
+
+***
+
+<img src="./img(Ex)/절대상대경로.png" width="650px" title="th img" alt="screenshot"></img>
 
 ***
 
