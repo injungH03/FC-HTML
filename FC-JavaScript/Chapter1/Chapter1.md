@@ -47,4 +47,32 @@
 
 <h2>식별자(Identifier)</h2>
 <p>코드 내의 변수, 함수, 혹은 속성을 식별하는 문자열</p>
+<p>
+<code>var</code> = 'Mark'; 
+</p>
+<p>
+<code>function</code> hello() {}
+</p>
+<p>
+<code>var</code> person = {name: 'Mark', age: 37};
+</p>
+
+<p>대소문자를 구분한다.</p>
+<p>
+<code>var</code> myName = 'Mark';
+</p>
+<p>
+<code>var</code> myname = 'Mark';
+</p>
+
+<ul>
+  <li>
+  '유니코드 문자','$','_','숫자(0-9)' 를 사용할 수 있지만, 숫자로 시작할 수는 없다.
+  </li>
+  <li>'예약어'는 사용할 수 없고, '공백 문자'도 사용할 수도 없다.</li>
+  <li>프로그램에서 사용하는 변수나 함수의 이름을 짓는 것은 언제나 어려운 일이다.</li>
+  <li>의미없는 이름은 사용하지 않고, 역할에 맞는 적절한 이름을 짓도록 노력해야 한다.</li>
+</ul>
+
+[JavaScript variable name validator](https://mothereff.in/js-variables)
 
