@@ -1,6 +1,6 @@
 <h1>개요</h1>
 
-**
+***
 
 <p>일반적으로 반응형 웹에서 이미지를 지원하기 위해, ‘미디어쿼리’라고 부르는 CSS Media Rule(<code>@media</code>)에서 <code>background-image</code> 속성을 많이
     사용하는데, 반응형 이미지를 처리하기 위해 뷰포트(Viewport)의 크기부터 사용자 화면의 해상도 등 많은 환경을 고려해야 합니다.<br>하지만 우리는 HTML IMG의 <code>srcset</code>과
