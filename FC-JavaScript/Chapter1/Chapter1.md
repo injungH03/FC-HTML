@@ -17,13 +17,34 @@
   <li>이 경우에는 마자막 } 뒤에 세미콜론을 붙이지 않는다.</li>
 </ul>
 
-
 <h2>Keywords</h2>
 <ul>
   <li>자바스크립트에서 특정한 목적을 위해 사용하는 단어</li>
   <li>이러한 키워드 들은 예약어(?)로 지정되어 있다.</li>
 </ul>
 <br>
-<p>var name = 'Mark'<br>
-// var 라는 단어는 변수를 선언할 때 사용하는 키워드입니다.
+<p>
+<code>var</code> name = 'Mark' //<code>var</code> 라는 단어는 변수를 선언할 때 사용하는 키워드입니다.
 </p>
+
+
+<h2>Reserved Words</h2>
+<p>프로그램을 작성할 때, 변수명, 함수명 등 이름으로 사용할 수 없는 단어</p>
+
+<p>
+<code>var return</code> = '변수명'; //<code>return</code>은 예약어라 변수명으로 사용할 수 없다.
+</p>
+<p><code>function</code> for() {} //<code>for</code> 는 예약어라 함수명으로 사용할 수 없다.
+</p>
+
+
+<h2>Reserved keywords</h2>
+<p>이미 특정한 목적을 위해 사용하기 때문에 사용할 수 없는 예약어</p>
+
+<h2>Future reserved keywords</h2>
+<p>앞으로 특정한 목적을 위해 사용할 가능성이 있어서 사용할 수 없는 예약어</p>
+
+
+<h2>식별자(Identifier)</h2>
+<p>코드 내의 변수, 함수, 혹은 속성을 식별하는 문자열</p>
+
