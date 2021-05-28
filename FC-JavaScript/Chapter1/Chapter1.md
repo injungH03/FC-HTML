@@ -160,15 +160,33 @@ if(true) {
   let age = 37;
   console.log(age);
 }
-
 //age++;
 
 //반복문
-
 for (let i = 0; i < 5; i++) {
   const message = 'hello:' + i;
   console.log(message);
 }
-
 //console.log(message);
+
+
+//함수
+function hello1() {
+  const name = 'Mark';
+  console.log(name);
+}
+//console.log(name);
+
+//arrow 함수
+const hello2 = () => {
+  const age = 37;
+  console.log(age);
+}
+//console.log(age);
 ```
+
+<h3>var 의 유효 범위 </h3>
+<p>함수 스코프</p>
+
+<h3>function () {}</h3>
+<p>함수</p>
