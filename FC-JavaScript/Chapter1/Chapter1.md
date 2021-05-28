@@ -153,3 +153,22 @@ console.log(result);
 
 <h3>const, let 의 유효 범위</h3>
 <p>블록 스코프, 블록 - {}</p>
+
+```JavaScript
+//조건문
+if(true) {
+  let age = 37;
+  console.log(age);
+}
+
+//age++;
+
+//반복문
+
+for (let i = 0; i < 5; i++) {
+  const message = 'hello:' + i;
+  console.log(message);
+}
+
+//console.log(message);
+```
