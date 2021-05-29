@@ -214,8 +214,6 @@ const hello2 = () => {
 <p>하지만 타입이 없는 것은 아니다.</p>
 
 <h4>데이터 타입</h4>
-
-<ul>기본 타입(Primitive values)</ul>
 <ul> 기본 타입(Primitive values)
   <li>Boolean</li>
   <li>Null</li>
@@ -224,3 +222,4 @@ const hello2 = () => {
   <li>String</li>
   <li>Symbol(ECMAScript 6에 추가됨)</li>
 </ul>
+<ul>객체(Objects)</ul>
