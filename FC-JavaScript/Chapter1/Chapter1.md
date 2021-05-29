@@ -45,6 +45,7 @@
 <p>앞으로 특정한 목적을 위해 사용할 가능성이 있어서 사용할 수 없는 예약어</p>
 
 
+
 <h2>식별자(Identifier)</h2>
 <p>코드 내의 변수, 함수, 혹은 속성을 식별하는 문자열</p>
 <p>
@@ -93,6 +94,8 @@ if ((5 + 10) % 5 === 0) {
 }
 ```
 
+***
+
 <h3>const 상수를_지칭하는_이름</h3>
 <p>상수를 선언하는 방법</p>
 
@@ -111,6 +114,8 @@ if ((5 + 10) % 5 === 0) {
   console.log('야호5');
 }
 ```
+
+***
 
 <h3>const 상수를_지칭하는_이름 = 값;</h3>
 <p>상수를 선언하면서 바로 값을 할당하는 방법</p>
@@ -185,8 +190,37 @@ const hello2 = () => {
 //console.log(age);
 ```
 
+***
+
 <h3>var 의 유효 범위 </h3>
 <p>함수 스코프</p>
 
+***
+
 <h3>function () {}</h3>
 <p>함수</p>
+
+***
+
+<h3>var와 호이스팅(var & hoisting)</h3>
+
+<p>hoisting - 아래 있는 선언을(만) 끌어 올리다.</p>
+
+***
+
+<h3>자료형(Data Types)</h3>
+
+<h4>변수가 가지는 고정 타입이 없다.</h4>
+<p>하지만 타입이 없는 것은 아니다.</p>
+
+<h4>데이터 타입</h4>
+
+<ul>기본 타입(Primitive values)</ul>
+<ul> 기본 타입(Primitive values)
+  <li>Boolean</li>
+  <li>Null</li>
+  <li>Undefined</li>
+  <li>Number</li>
+  <li>String</li>
+  <li>Symbol(ECMAScript 6에 추가됨)</li>
+</ul>
