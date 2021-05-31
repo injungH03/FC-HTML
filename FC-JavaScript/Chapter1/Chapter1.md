@@ -224,5 +224,47 @@ const hello2 = () => {
 </ul>
 <ul>객체(Objects)</ul>
 
+***
 
 <h3>조건문(Conditional Statements)</h3>
+
+```JavaScript
+/*
+if (표현식) {
+  표현식이 참으로 평가될 때, 실행되는 문장들의 모음
+}
+*/
+
+if(true) {
+  console.log('항상 실행');
+}
+
+if(false) {
+  console.log('항상 실행되지 않음');
+}
+```
+
+<h4>표현식이 거짓으로 평가될 때</h4>
+<h5>Falsy</h5>
+<p>false, 0, ", null, undefinded, NaN</p>
+
+<h4>표현식이 참으로 평가될 때</h4>
+<h5>Truethy</h5>
+<p>Falst의 반대: true, 0이 아닌 숫자, '문자열', {}, []</p>
+
+<h4>else {}</h4>
+<p>if에 해당하지 않을 때</p>
+
+<h4>else if{}</h4>
+<p>if에 해당하지 않을 때</p>
+
+***
+
+<h3>논리 연산자를 이용한 조건문 평가</h3>
+<p>&&,||,!</p>
+
+<h3>논리 연산자를 이용한 조건부 실행</h3>
+
+<h3>삼항 연산자를 이용한 조건부 실행</h3>
+
+<h3>switch를 이용한 조건문</h3>
