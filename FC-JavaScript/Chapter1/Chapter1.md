@@ -245,20 +245,25 @@ if(false) {
 ```
 
 <h4>표현식이 거짓으로 평가될 때</h4>
-<h5>Falsy</h5>
-<p>false, 0, ", null, undefinded, NaN</p>
+<ul>
+<li>Falsy</li>
+<li>false, 0, ", null, undefinded, NaN</li>
+</ul>
 
 <h4>표현식이 참으로 평가될 때</h4>
-<h5>Truethy</h5>
-<p>Falst의 반대: true, 0이 아닌 숫자, '문자열', {}, []</p>
+<ul>
+<li>Truethy</li>
+<li>Falst의 반대: true, 0이 아닌 숫자, '문자열', {}, []</li>
+</ul>
 
 <h4>else {}</h4>
-<p>if에 해당하지 않을 때</p>
+<li>if에 해당하지 않을 때</li>
 
 <h4>else if{}</h4>
-<p>if에 해당하지 않을 때</p>
+<li>if에 해당하지 않을 때</li>
 
-<h4>논리 연산자를 이용한 조건문 평가</h4> <p>[&&,||,!]</p>
+<h4>논리 연산자를 이용한 조건문 평가</h4> 
+<li>[&&,||,!]</li>
 
 <h4>논리 연산자를 이용한 조건부 실행</h4>
 
@@ -315,3 +320,48 @@ for(;;) {
 <h4>whlie(조건) { <br>
   조건이 거짓이 될 떄까지 반복 실행<br>
 }</h4>
+
+```JavaScript
+// while 무한 루프
+while (true) {
+  console.log('안녕하세요');
+  if (Math.random() * 100 > 90) {
+    break;
+  }
+}
+```
+
+<h4>do { <br>
+  조건이 거짓이 될 떄까지 반복 실행<br>
+} while(조건);</h4>
+
+```JavaScript
+do {
+  console.log('안녕하세요');
+} while (Math.random() * 100 <= 90);
+```
+
+<h4>for of (iterable)<br>
+for in (모든 프로퍼티)</h4>
+
+
+```JavaScript
+// for of
+for (const i of [1, 2, 3]) {
+  console.log(i);
+}
+
+// for in
+Object.prototype.test = function() {};
+
+for (const i in {a: 1, b: 2, c: 3}) {
+  console.log(i);
+}
+```
+
+***
+
+<h3>함수(function)</h3>
+
+***
+
