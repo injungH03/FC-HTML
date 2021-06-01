@@ -258,13 +258,60 @@ if(false) {
 <h4>else if{}</h4>
 <p>if에 해당하지 않을 때</p>
 
+<h4>논리 연산자를 이용한 조건문 평가</h4> <p>[&&,||,!]</p>
+
+<h4>논리 연산자를 이용한 조건부 실행</h4>
+
+<h4>삼항 연산자를 이용한 조건부 실행</h4>
+
+<h4>switch를 이용한 조건문</h4>
+
 ***
 
-<h3>논리 연산자를 이용한 조건문 평가</h3>
-<p>&&,||,!</p>
+<h3>반복문(Iteration Statements)</h3>
 
-<h3>논리 연산자를 이용한 조건부 실행</h3>
+```JavaScript
+// 반복문이 없다면?
+console.log('안녕하세요');
+console.log('안녕하세요');
+console.log('안녕하세요');
+console.log('안녕하세요');
+console.log('안녕하세요');
 
-<h3>삼항 연산자를 이용한 조건부 실행</h3>
+// for 문을 사용한다면?
+// 보통 어떤 유한한 횟수만큼 반복할 때는 for 문을 사용합니다.
 
-<h3>switch를 이용한 조건문</h3>
+for (let i = 0; i < 5; i++) {
+  console.log('안녕하세요');
+}
+```
+
+<h4>for(초기화; 반복 조건; 반복이 된 후 실행되는 코드) { <br>
+반복이 되는 코드 블럭 <br>
+}</h4>
+
+```JavaScript
+for(a; b; c) {
+  d
+}
+e
+// 실행 순서
+// a -> d -> c -> b -> d -> c -> b -> e
+```
+
+<h4>for(;;) { <br>
+d <br>
+}</h4>
+
+```JavaScript
+for(;;) {
+  console.log('안녕하세요');
+  if (Math.random() * 100 > 90) {
+    break;
+  }
+}
+```
+
+<h4>whlie(조건) { <br>
+  조건이 거짓이 될 떄까지 반복 실행<br>
+}</h4>
