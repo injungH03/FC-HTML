@@ -246,24 +246,30 @@ if(false) {
 
 <h4>표현식이 거짓으로 평가될 때</h4>
 <ul>
-<li>Falsy</li>
-<li>false, 0, ", null, undefinded, NaN</li>
+  Falsy
+  <li>false, 0, ", null, undefinded, NaN</li>
 </ul>
 
 <h4>표현식이 참으로 평가될 때</h4>
 <ul>
-<li>Truethy</li>
-<li>Falst의 반대: true, 0이 아닌 숫자, '문자열', {}, []</li>
+  Truethy
+  <li>Falst의 반대: true, 0이 아닌 숫자, '문자열', {}, []</li>
 </ul>
 
 <h4>else {}</h4>
-<li>if에 해당하지 않을 때</li>
+<ul>
+  <li>if에 해당하지 않을 때</li>
+</ul>
 
 <h4>else if{}</h4>
-<li>if에 해당하지 않을 때</li>
+<ul>
+  <li>if에 해당하지 않을 때</li>
+</ul>
 
-<h4>논리 연산자를 이용한 조건문 평가</h4> 
-<li>[&&,||,!]</li>
+<h4>논리 연산자를 이용한 조건문 평가</h4>
+<ul>
+  <li>[&&,||,!]</li>
+</ul>
 
 <h4>논리 연산자를 이용한 조건부 실행</h4>
 
@@ -290,7 +296,8 @@ for (let i = 0; i < 5; i++) {
   console.log('안녕하세요');
 }
 ```
-
+<br>
+<br>
 <h4>for(초기화; 반복 조건; 반복이 된 후 실행되는 코드) { <br>
 반복이 되는 코드 블럭 <br>
 }</h4>
@@ -303,7 +310,8 @@ e
 // 실행 순서
 // a -> d -> c -> b -> d -> c -> b -> e
 ```
-
+<br>
+<br>
 <h4>for(;;) { <br>
 d <br>
 }</h4>
@@ -316,7 +324,8 @@ for(;;) {
   }
 }
 ```
-
+<br>
+<br>
 <h4>whlie(조건) { <br>
   조건이 거짓이 될 떄까지 반복 실행<br>
 }</h4>
@@ -330,7 +339,8 @@ while (true) {
   }
 }
 ```
-
+<br>
+<br>
 <h4>do { <br>
   조건이 거짓이 될 떄까지 반복 실행<br>
 } while(조건);</h4>
@@ -340,7 +350,8 @@ do {
   console.log('안녕하세요');
 } while (Math.random() * 100 <= 90);
 ```
-
+<br>
+<br>
 <h4>for of (iterable)<br>
 for in (모든 프로퍼티)</h4>
 
@@ -364,4 +375,237 @@ for (const i in {a: 1, b: 2, c: 3}) {
 <h3>함수(function)</h3>
 
 ***
+
+<h4>function hello() {}</h4>
+<ul>
+<li>함수를 만들 떄 사용하는 키워드</li>
+</ul>
+
+```JavaScript
+// function
+// 이름이 hello1 인 함수를 선언
+
+function hello1() {
+  console.log('hello1');
+}
+
+console.log(hello1, typeof hello1);
+
+// 함수의 매개변수
+// 함수를 호출할 때 값을 지정
+
+function hello2(name) {
+  console.log('hello2', name);
+}
+
+// 함수의 리턴
+// 함수를 실행하면 얻어지는 값
+
+function hello3(name) {
+  return `hello3 ${name}`;
+}
+
+console.log(hello3('Mark'));
+```
+<br>
+<br>
+<h4>const hello = function() {}</h4>
+<ul>
+<li>함수를 만들 떄 사용하는 키워드</li>
+</ul>
+
+```JavaScript
+// 이름이 hello1 인 함수를 선언
+// const hello = function() {}
+const hello1 = function () {
+    console.log('hello1');
+};
+
+console.log(hello1, typeof hello1);
+
+
+// 함수의 매개변수
+// 함수를 호출할 때 값을 지정
+// const hello = function() {}
+const hello2 = function (name) {
+    console.log('hello2', name);
+};
+
+// 함수의 리턴
+// 함수를 실행하면 얻어지는 값
+// const hello = function() {}
+const hello3 = function (name) {
+    return `hello3 ${name}`;
+};
+```
+<br>
+<br>
+<h4>선언적 function 과 익명 함수를 만들어 변수에 할당</h4>
+
+```JavaScript
+//차이점
+
+var hello2;
+console.log(hello2);
+
+hello1();
+// hello2();
+hello3();
+
+function hello1() {
+    console.log('hello1');
+} 
+// 선언적 방신은 어디있던지 JavaScript 특성상 함수를 먼저 메로리에 올린다.
+
+hello2 = function() {
+    console.log('hello2');
+};
+
+const hello3 = function() {
+    console.log('hello3')
+};
+```
+<br>
+<br>
+<h4>const hello = new function();</h4>
+<ul>
+<li>생성자 함수로 함수를 만드는 방법</li>
+</ul>
+
+```JavaScript
+// new Functioon(/* 인자1, 인자2, ..., 함수의 바디 */);
+
+const sum = new Function('a', 'b', 'c', 'return a + b + c');
+
+console.log(sum(1, 2, 3));
+```
+<br>
+<br>
+<h4>function 과 new Function());</h4>
+
+```JavaScript
+// 차이점
+globae.a = 0;
+
+
+{
+  const a 1;
+
+  const test = new Function('return a');
+
+  console.log(test());
+}
+
+{
+  const a = 2;
+
+  const test = function() {
+    return a;
+  }
+
+  console.log(test());
+}
+```
+<br>
+<br>
+<h4>() => {} arrow function(es6)</h4>
+
+```JavaScript
+// arrow 함수를 만들어 이름이 hello1 인 변수에 할당
+
+const hello1 = () => {
+    console.log('hello1');
+};
+
+// 함수의 매개변수
+// 함수를 호출할 때 값을 지정
+
+// 매개변수가 하나일 때, 괄호 생략 가능
+
+const hello2 = name => {
+    console.log('hello2' , name);
+};
+
+const hello3 = (name, age) => {
+    console.log('hello3', name, age);
+};
+
+// 함수의 리텅
+// 함수를 실행하면 얻어지는 값
+
+const hello4 = name => {
+    return `hello4 ${name}`;
+}
+
+const hello5 = name => `hello5 ${name}`;
+```
+<br>
+<br>
+<h4>new 함수(); 생성자 함수</h4>
+
+```JavaScript
+//  생성자 함수를 이용하여 새로운 객체를 만들어 내는 방법
+
+function Person(name, age) {
+    console.log(this);
+    this.name = name;
+    this.age = age;
+}
+
+const p = new Person('Mark', 37);
+
+console.log(p, p.name, p.age);
+
+const a = new Person('injung', 33);
+
+console.log(a, a.name, a.age);
+
+
+// arrow 에서는 this가 생기지 않는다.
+const Cat = (name, age) => {
+    console.log(this);
+    this.name = name;
+    this.age = age;
+};
+
+const c = new cat('냥이', 1);
+```
+<br>
+<br>
+<h4>함수 안에서 함수를 만들어 리턴</h4>
+
+```JavaScript
+// 함수를 호출하면 함수를 만들어서 리턴
+
+function plus(base) {
+  return function(num) {
+    return base + num;
+  }
+}
+
+const plus5 = plus(5);
+console.log(pluse5(10));
+
+const plus7 = plus(7);
+console.log(plus7(8));
+```
+<br>
+<br>
+<h4>함수를 호출할 때, 인자로 함수를 사용</h4>
+
+```JavaScript
+// 함수를 인자로 하여 함수를 호출
+
+function hello(c) {
+  console.log('hello');
+  c();
+}
+
+hello(function() {
+  console.log('콜백');
+});
+```
+
+***
+
 
