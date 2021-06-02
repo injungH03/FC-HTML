@@ -5,7 +5,7 @@
 
 <h2>Statement</h2>
 <ul>
-  <li>하나 혹은 여러 개의 표션식이 모여 문장을 이룬다.</li>
+  <li>하나 혹은 여러 개의 표현식이 모여 문장을 이룬다.</li>
   <li>모든 표현식은 문장이 될 수 있다.</li>
   <li>(보통) 문장의 끝에는 세미 콜론을 붙인다.</li>
   <li>한 줄에 문장이 하나인 경우에는 세미 콜론을 붙이지 않아도 문제가 없다.</li>
@@ -44,8 +44,7 @@
 <h2>Future reserved keywords</h2>
 <p>앞으로 특정한 목적을 위해 사용할 가능성이 있어서 사용할 수 없는 예약어</p>
 
-
-
+<br>
 <h2>식별자(Identifier)</h2>
 <p>코드 내의 변수, 함수, 혹은 속성을 식별하는 문자열</p>
 <p>
@@ -94,8 +93,7 @@ if ((5 + 10) % 5 === 0) {
 }
 ```
 
-***
-
+<br>
 <h3>const 상수를_지칭하는_이름</h3>
 <p>상수를 선언하는 방법</p>
 
@@ -115,17 +113,16 @@ if ((5 + 10) % 5 === 0) {
 }
 ```
 
-***
-
+<br>
 <h3>const 상수를_지칭하는_이름 = 값;</h3>
 <p>상수를 선언하면서 바로 값을 할당하는 방법</p>
-
+<br>
 <h3>let 변수를_지칭하는_이름;</h3>
 <p>변수를 선언하는 방법</p>
-
+<br>
 <h3>변수를_지칭하는_이름 = 값;</h3>
 <p>변수에 값을 할당하는 방법</p>
-
+<br>
 <h3>let 변수를_지칭하는_이름 = 값;</h3>
 <p>변수에 값을 할당하는 방법</p>
 
@@ -152,8 +149,7 @@ if (sum % 5 === 0) {
 console.log(result);
 ```
 
-***
-
+<br>
 <h2>변수의 유효 범위(scope of variables)</h2>
 
 <h3>const, let 의 유효 범위</h3>
@@ -190,24 +186,20 @@ const hello2 = () => {
 //console.log(age);
 ```
 
-***
-
+<br>
 <h3>var 의 유효 범위 </h3>
 <p>함수 스코프</p>
 
-***
-
+<br>
 <h3>function () {}</h3>
 <p>함수</p>
 
-***
-
+<br>
 <h3>var와 호이스팅(var & hoisting)</h3>
 
 <p>hoisting - 아래 있는 선언을(만) 끌어 올리다.</p>
 
-***
-
+<br>
 <h3>자료형(Data Types)</h3>
 
 <h4>변수가 가지는 고정 타입이 없다.</h4>
@@ -223,7 +215,7 @@ const hello2 = () => {
   <li>Symbol(ECMAScript 6에 추가됨)</li>
 </ul>
 <ul>객체(Objects)</ul>
-
+<br>
 ***
 
 <h3>조건문(Conditional Statements)</h3>
@@ -608,4 +600,172 @@ hello(function() {
 
 ***
 
+<h3>객체</h3>
+<br>
+<h4>함수, 클래스(틀) => 객체, 개체, object</h4>
+<br>
+<h4>function 틀() {} => new 틀()</h4>
 
+```JavaScript
+// 생성자 함수로 객체 만들기
+// 생성자 함수
+
+function A() {}
+
+const a = new A();
+console.log(a, typeof a);
+console.log(A());
+
+// 생성하면서 데이터 넣기
+
+function B(name, age) {
+  console.log(name, age);
+}
+
+const b = new B();
+const c = new B('Mark', 37)
+console.log(B());
+```
+
+<br>
+<h4>객체에 속성 추가하기 property</h4>
+
+```JavaScript
+// 값을 속성으로 넣기
+function A() {
+  this.name = 'Mark';
+}
+
+const a = new A(); // {name: 'Makr'}
+console.log(a); 
+
+// 함수를 속성으로 넣기
+function B() {
+  this.hello = function() {
+    console.log('hello');
+  };
+}
+
+new B().hello();
+
+```
+<br>
+<h4>new Object()</h4>
+<p>Object로 객체 만들기</p>
+
+```JavaScript
+// new Object
+
+const a = new Object();
+
+console.log(a, typeof a);
+
+const b = new Object(true);
+
+console.log(b, typeof b);
+
+const c = new Objcet({name : 'Mark'});
+
+console.log(c, typeof c);
+```
+<br>
+<h4>프로토타입 체인</h4>
+<p>.prototype</p>
+
+```JavaScript
+// prototype
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  // this.hello = function() {
+  //   console.log('hello', this.name, this.age);
+  // };
+}
+
+Person.prototype.hello() = function() {
+  console.log('hello', this.name, this.age);
+};
+
+const p = new Person('Mark', 37);
+
+p.hello();
+console.log(p.toString());
+
+console.log(Person.prototype);
+console.log(Person.prototype.toString);
+console.log(Person.prototype.constructor);
+console.log(Person.prototype.hello);
+
+console.log(Object.prototype);
+console.log(Object.prototype.toString);
+console.log(Object.prototype.constructor);
+
+console.log(p instanceof Person);
+console.log(p instanceof Object);
+```
+<br>
+<h4>프로토타입을 이용한 객체 확장</h4>
+<p>.prototype</p>
+
+```JavaScript
+// prototype 상속
+
+function Person() {}
+
+Person.prototype.hello = function() {
+    console.log('hello');
+};
+
+function Korean(region) {
+    this.region = region;
+    this.where = function() {
+        console.log('where', this.region);
+    };
+}
+
+Korean.prototype = Person.prototype;
+
+const k = new Korean('Seoul');
+
+k.hello();
+k.where();
+
+console.log(k instanceof Korean);
+console.log(k instanceof Pserson);
+console.log(k instanceof Object);
+```
+
+<br>
+<h4>객체 리터럴</h4>
+
+```JavaScript
+// 객체 리터럴
+
+const a = {};
+
+console.log(a, typeof a);
+
+const b = {
+  name: 'Mark',
+};
+
+console.log(b, typeof b);
+
+const c = {
+  name: 'Mark',
+  hello1() {
+    console.log('hello1', this.name);
+  },
+   hello2: function() {
+    console.log('hello2', this.name);
+  },
+   hello3: () => {
+    console.log('hello3', this);
+  },
+};
+
+c.hello1();
+c.hello2();
+c.hello3();
+```
