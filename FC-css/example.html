@@ -1,0 +1,286 @@
+기본문법
+
+선택자 {
+    속성: 속성값;
+    속성: 속성값;
+}
+
+전체 선택자(Universal Selector)
+(요소 내부)의 모든 요소를 선택
+
+* {
+  color: red;
+}
+
+
+
+
+태그 선택자(Type Selector)
+태그 이름이 <code>E</code>인 요소 선택
+
+li {
+  color: red;  
+}
+
+<div>
+    <ul>
+        <li>사과</li>   <!--선택--> 
+        <li>딸기</li>   <!--선택-->
+        <li>오렌지</li>  <!--선택--> 
+    </ul>
+    <div>당근</div>
+    <p>토마토</p>
+    <span>오렌지</span>
+</div>
+
+
+
+
+클래스 선택자(Class Selector)
+HTML <code>class</code> 속성의 값이 <code>E</code>인 요소 선택
+
+.orange {
+    color: red;
+}
+
+<div>
+    <ul>
+        <li>사과</li>    
+        <li>딸기</li>   
+        <li class="orange">오렌지</li>  <!--선택--> 
+    </ul>
+    <div>당근</div>
+    <p>토마토</p>
+    <span class="orange">오렌지</span> <!--선택-->
+</div>
+
+
+
+아이디 선택자(ID Selector)
+HTML <code>id</code> 속성의 값이<code>E</code>인 요소 선택
+
+#orange {
+    color: red;
+}
+
+<div>
+    <ul>
+        <li>사과</li>    
+        <li>딸기</li>   
+        <li id="orange" class="orange">오렌지</li>  <!--선택--> 
+    </ul>
+    <div>당근</div>
+    <p>토마토</p>
+    <span class="orange">오렌지</span> 
+</div>
+
+
+
+
+일치 선택자(Basic Combinator)
+<code>E</code>와<code>F</code>를 동시에 만족하는 요소 선택
+
+span.orange {
+    color: red;
+}
+
+<div>
+    <ul>
+        <li>사과</li>    
+        <li>딸기</li>   
+        <li class="orange">오렌지</li>   
+    </ul>
+    <div>당근</div>
+    <p>토마토</p>
+    <span class="orange">오렌지</span> <!--선택-->
+</div>
+
+
+
+자식 선택자(Child Combinator)
+<code>E</code>의 자식 요소 <code>F</code>를 선택
+
+
+ul > .orange {
+    color: red;
+}
+
+<div>
+    <ul>
+        <li>사과</li>    
+        <li>딸기</li>   
+        <li class="orange">오렌지</li>  <!--선택-->
+    </ul>
+    <div>당근</div>
+    <p>토마토</p>
+    <span class="orange">오렌지</span> 
+</div>
+
+
+
+후손(하위) 선택자(Descendant Combinator)
+<code>E</code>의 후손(하위) 요소<code>F</code>를 선택
+'띄어쓰기'가 선택자의 기호로 사용된다.
+
+div .orange {
+    color: red;
+}
+
+<div>
+    <ul>
+        <li>사과</li>    
+        <li>딸기</li>   
+        <li class="orange">오렌지</li>  <!--선택-->
+    </ul>
+    <div>당근</div>
+    <p>토마토</p>
+    <span class="orange">오렌지</span> <!--선택-->
+</div>
+
+
+
+인접 형제 선택자(Adjacent Sibling Combinator)
+<code>E</code>의 다음 형제 요소<code>F</code>하나만 선택
+
+.orange + li {
+    color: red;
+}
+
+<ul>
+    <li>사과</li>    
+    <li>딸기</li>   
+    <li class="orange">오렌지</li> 
+    <li>망고</li>  <!--선택-->
+    <li>사과</li>
+</ul>
+
+
+
+일반 형제 선택자(General Sibling Combinator)
+<code>E</code>의 다음 형제 요소<code>F</code>모두 선택
+
+.orange ~ li {
+    color: red;
+}
+
+<ul>
+    <li>사과</li>    
+    <li>딸기</li>   
+    <li class="orange">오렌지</li> 
+    <li>망고</li>  <!--선택-->
+    <li>사과</li>  <!--선택-->
+</ul>
+
+
+HOVER
+<code>E</code>에 마우스(포인터)가 올라가 있는 동안에만 <code>E</code>선택
+E:hover
+
+
+ACTIVE
+<code>E</code>를 마우스로 클릭하는 동안에만<code>E</code>선택
+E:active
+
+
+FOCUS
+<code>E</code>가 포커스 된 동안에만<code>E</code>선택
+E:focus
+
+
+FIRST CHILD
+<code>E</code>가 형제 요소 중 첫번째 요소라면 선택
+E:first-child
+
+.fruits li:first-child {
+    color: red;
+}
+
+<ul class="fruits">
+    <li>사과</li> <!--선택-->    
+    <li>딸기</li>   
+    <li>오렌지</li> 
+    <li>망고</li>  
+    <li>사과</li>  
+</ul>
+
+
+LAST CHILD
+<code>E</code>가 형제 요소 중 마지막 요소라면 선택
+E:last-child
+
+.fruits li:last-child {
+    color: red;
+}
+
+<ul class="fruits">
+    <li>사과</li>    
+    <li>딸기</li>   
+    <li>오렌지</li> 
+    <li>망고</li>  
+    <li>사과</li> <!--선택-->
+</ul>
+
+
+NTH CHILD
+<code>E</code>가 형제 요소 중 <code>n</code>번째 요소라면 선택<br>
+(<code>n</code>키워드 사용시 <code>0</code>부터 해석(Zero-base))
+E:nth-child(n)
+
+.fruits li:nth-child(2) {
+    color: red;
+}
+
+<ul class="fruits">
+    <li>사과</li>    
+    <li>딸기</li>  <!--선택--> 
+    <li>오렌지</li> 
+    <li>망고</li>  
+</ul>
+
+
+.fruits li:nth-child(2n) {
+    color: red;
+}
+
+<ul class="fruits">
+    <li>사과</li>    
+    <li>딸기</li>  <!--선택--> 
+    <li>오렌지</li> 
+    <li>망고</li>  <!--선택--> 
+</ul>
+// '짝수'번째 요소들만 선택할 수 있습니다.
+
+
+.fruits li:nth-child(n+3) {
+    color: red;
+}
+
+<ul class="fruits">
+    <li>사과</li>    
+    <li>딸기</li>  
+    <li>오렌지</li> <!--선택--> 
+    <li>망고</li>  <!--선택--> 
+</ul>
+// 3번째 요소부터 이후 요소들을 선택합니다.
+
+
+.fruits p:nth-child(1) {
+    color: red;
+}
+<!-- 선택된 요소 없음 -->
+<div class="fruits">
+<div>딸기</div>
+<p>사과</p>
+<p>망고</p>
+<span>오렌지</span>
+</div>
+<!-- .fruits 의 첫번째 자식 요소가 <p></p> 가 아니기 때문에 선택되지 않습니다. -->
+
+
+<h3>NTH OF TYPE</h3>
+<p>
+<code>E</code>의 타입(태그이름)과 동일한 타입인 형제 요소 중 <code>E</code>가 <code>n</code> 번째 요소라면 선택
+(<code>n</code> 키워드 사용시 <code>0</code>부터 해석(Zero-base))
+
+E:nth-of-type(n)
+</p>

@@ -1,0 +1,43 @@
+/*  
+a:hover {
+    font-weight: bold;
+    font-size: 20px;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background: gold;
+    transition: 0.4s;
+}
+ 올려놨을때
+.box:hover {  
+    width: 200px;
+}
+
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: goldenrod;
+    transition: 0.4s;
+}
+
+클릭했을 때
+.box:active{ 
+    width: 200px;
+    background: greenyellow;
+}
+*/
+
+input {
+    width: 100px;
+    outline: none;
+    border: 1px solid lightblue;
+    padding:  5px 10px;
+    transition: 0.4s;
+}
+input:focus {
+    border-color: red;
+    width: 200px;
+}
+
