@@ -60,9 +60,11 @@ color: red;
     <span class="orange">오렌지</span><!--선택-->
 </div>
 ```
+
 <br>
 <h3>아이디 선택자(ID Selector)</h3>
 <p>HTML <code>id</code> 속성의 값이<code>E</code>인 요소 선택</p>
+
 ```CSS
 #orange {
 color: red;
