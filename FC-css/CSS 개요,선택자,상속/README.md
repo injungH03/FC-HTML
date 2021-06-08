@@ -249,7 +249,7 @@ color: red;
 </ul>
 ```
 <br>
-NTH CHILD
+<h3>NTH CHILD</h3>
 <p>
     <code>E</code>가 형제 요소 중 <code>n</code>번째 요소라면 선택<br>
     (<code>n</code>키워드 사용시 <code>0</code>부터 해석(Zero-base))
@@ -270,6 +270,7 @@ color: red;
 </ul>
 ```
 <br>
+***
 
 ```css
 .fruits li:nth-child(2n) {
@@ -286,6 +287,7 @@ color: red;
 <!-- '짝수'번째 요소들만 선택할 수 있습니다. -->
 ```
 <br>
+***
 
 ```css
 .fruits li:nth-child(n+3) {
@@ -302,6 +304,7 @@ color: red;
 <!-- 3번째 요소부터 이후 요소들을 선택합니다. -->
 ```
 <br>
+***
 
 ```css
 .fruits p:nth-child(1) {
@@ -370,7 +373,7 @@ color: red;
 
 ***
 
-<h2>가상 요소 선택자(Pseudo-Elements Selectors)</h2>
+<h3>가상 요소 선택자(Pseudo-Elements Selectors)</h3>
 <br>
 <h3>BEFORE</h3>
 <p><code>E</code> 요소 내부의 앞에, 내용(content)을 삽입</p>
@@ -504,10 +507,8 @@ color: red;
 }
 ```
 ```HTML
-<div class="ecosystem">생태계
-    <!-- RED -->
-    <div class="animal">동물
-        <!-- RED -->
+<div class="ecosystem">생태계 <!-- RED -->
+    <div class="animal">동물 <!-- RED -->
         <div class="diger">호랑이</div> <!-- RED -->
         <div class="lion">사자</div> <!-- RED -->
         <div class="elephant">코끼리</div> <!-- RED -->
@@ -602,7 +603,7 @@ Hello world! 라는 문자는 어떤 색상이 될까?
 <p>우선 순위에는 '중요도,명시도,선언 순서'의 개념이 있습니다. 각 개념이 의미하는 것을 기억하세요.</p>
 <br>
 
-<h4>1. 가장 중요(<code>!important</code)></h4>
+<h4>1. 가장 중요(<code>!important</code)>)</h4>
 <p><strong>모든 선언을 무시하고 가장 우선<br>
         점수:<code>∞</code> pt</strong></p>
 
