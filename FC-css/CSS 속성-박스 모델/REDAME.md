@@ -1,6 +1,5 @@
 <h3><code>width</code></h3>
 <p>요소의 가로 너비를 지정</p>
-<br>
 <h3>속성 값</h3>
 <table>
     <thead>
@@ -26,7 +25,6 @@
 <br>
 <h3><code>height</code></h3>
 <p>요소의 세로 너비를 지정</p>
-<br>
 <h3>속성 값</h3>
 <table>
     <thead>
@@ -49,7 +47,6 @@
         </tr>
     </tbody>
 </table>
-<br>
 
 ```html
 <span>Text text</span>
@@ -117,7 +114,6 @@
 <br>
 <h3><code>max-height</code></h3>
 <p>요소의 최대 세로 너비를 지정</p>
-<br>
 <h3><code>min-height</code></h3>
 <p>요소의 최소 가로 너비를 지정</p>
 <h3>속성 값</h3>
@@ -147,7 +143,6 @@
 <p>요소의 '외부(바깥) 여백'을 지정 <code>단축</code><br>
 음수 값(Negative Values)을 사용할 수 있습니다.
 </p>
-<br>
 <h3>속성 값</h3>
 <table>
     <thead>
@@ -214,13 +209,13 @@ margin: [위,아래,좌,우];
 <br>
 <h3><code>margin-top</code></h3>
 <p>요소의 '외부(바깥) <strong>위쪽</strong> 여백'을 지정 <code>개별</code></p>
-<br>
+
 <h3><code>margin-bottom</code></h3>
 <p>요소의 '외부(바깥) <strong>아래쪽</strong> 여백'을 지정 <code>개별</code></p>
-<br>
+
 <h3><code>margin-left</code></h3>
 <p>요소의 '외부(바깥) <strong>왼쪽</strong> 여백'을 지정 <code>개별</code></p>
-<br>
+
 <h3><code>margin-right</code></h3>
 <p>요소의 '외부(바깥) <strong>오른쪽</strong> 여백'을 지정 <code>개별</code></p>
 
@@ -287,7 +282,6 @@ margin: [위,아래,좌,우];
 
 <h3><code>padding</code></h3>
 <p>요소의'내부(안) 여백'을 지정 <code>단축</code></p>
-<br>
 <h3>속성 값</h3>
 <table>
     <thead>
@@ -329,19 +323,16 @@ margin: [위,아래,좌,우];
 <br>
 <h3><code>padding-top</code></h3>
 <p>요소의 '내부(안) <strong>위쪽</strong> 여백'을 지정 <code>개별</code></p>
-<br>
 <h3><code>padding-bottom</code></h3>
 <p>요소의 '내부(안) <strong>아래쪽</strong> 여백'을 지정 <code>개별</code></p>
-<br>
 <h3><code>padding-left</code></h3>
 <p>요소의 '내부(안) <strong>왼쪽</strong> 여백'을 지정 <code>개별</code></p>
-<br>
 <h3><code>padding-right</code></h3>
 <p>요소의 '내부(안) <strong>오른쪽</strong> 여백'을 지정 <code>개별</code></p>
 
 <h3>사용법</h3>
 
-```css
+```CSS
 .box1 {
     padding: 10px 20px 30px 40px; /* 단축속성 */
 }
@@ -358,7 +349,8 @@ margin: [위,아래,좌,우];
 <p>추가된 <code>padding</code> 값만큼 요소의 크기가 커지는 현상</p>
 <br>
 <h3>크기가 커지지 않도록 직접! 계산</h3>
-<>
+
+```css
     /* 100 x 100(px) 크기의 요소 만들기 */
     .box {
         width: 60px; /* +40px */
@@ -366,12 +358,12 @@ margin: [위,아래,좌,우];
         background: red;
         padding: 10px 20px;
     }
-</>
+```
 <p><code>padding</code>이 추가된 값만큼 <code>width</code>와 <code>height</code> 값을 다시 계산합니다.</p>
 
 <h3>크기가 커지지 않도록 자동! 계산</h3>
 
-```
+```css
     /* 100 x 100(px) 크기의 요소 만들기 */
     .box {
         width: 100px; 
@@ -386,7 +378,6 @@ margin: [위,아래,좌,우];
 
 <h3><code>border</code></h3>
 <p>요소의 '테두리 선'을 지정 <code>단축</code></p>
-<br>
 <h3>속성 값</h3>
 <table>
     <thead>
