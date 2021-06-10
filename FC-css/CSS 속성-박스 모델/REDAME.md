@@ -200,7 +200,7 @@ margin: [위,아래,좌,우];
 ```
 ```css
 .box {
-    margin: 10px 20px 30px 40px; <!-- 시계 방향 -->
+    margin: 10px 20px 30px 40px; /* 시계 방향 */
     margin: 10px 20px 40px;
     margin: 10px 40px;
     margin: 10px;
@@ -460,7 +460,7 @@ border-width: [위,아래,좌,우];
 ```
 ```css
 .box {
-    border-width: 10px 20px 30px 40px; <!-- 시계 방향 -->
+    border-width: 10px 20px 30px 40px; /* 시계 방향 */
     border-width: 10px 20px 40px;
     border-width: 10px 40px;
     border-width: 10px;
@@ -542,7 +542,7 @@ border-width: [위,아래,좌,우];
 ```
 ```css
 .box {
-    border-width: solid dotted double inset; <!-- 시계 방향 -->
+    border-width: solid dotted double inset; /* 시계 방향 */
     border-width: solid dotted inset;
     border-width: solid inset;
     border-width: solid;

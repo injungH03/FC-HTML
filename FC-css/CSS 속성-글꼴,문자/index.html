@@ -1,0 +1,90 @@
+<h3><code>font</code></h3>
+<p>글자 관련 속성들을 지정 <code>단축</code></p>
+<h3>속성 값</h3>
+<table>
+    <thead>
+        <tr>
+            <td>값</td>
+            <td>의미</td>
+            <td>기본값</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>font-style</code></td>
+            <td>글자 기울기 지정</td>
+            <td><code>normal</code></td>
+        </tr>
+        <tr>
+            <td><code>font-weight</code></td>
+            <td>글자 두께 지정</td>
+            <td><code>normal</code></td>
+        </tr>
+        <tr>
+            <td><code>font-size</code></td>
+            <td>글자 크기 지정</td>
+            <td><code>medium(16px)</code></td>
+        </tr>
+        <tr>
+            <td><code>line-height</code></td>
+            <td>줄 높이(줄 간격)지정</td>
+            <td><code>normal(Reset.css 적용 시 1)</code></td>
+        </tr>
+        <tr>
+            <td><code>font-family</code></td>
+            <td>글꼴(서체) 지정</td>
+            <td><code>운영체제(브라우저)에 따라 달라짐</code></td>
+        </tr>
+    </tbody>
+</table>
+<h3>사용법</h3>
+
+```
+font: 기울기 두께 크기 / 줄높이 글꼴;
+```
+```css
+.box {
+    font: italic bold 20px / 1.5 "Arial", sans-serif;
+}
+```
+```css
+.box {
+    font: 30px / 1.5;   /* ERROR */
+    font: bold;  /* ERROR */
+    font: bold sans-serif;  /* ERROR */
+    font: 30px / 1.5 sans-serif; 
+    font: bold 30px sans-serif;
+    font: italic 30px / 1.5 "Arial". sans-serif;
+}
+```
+<p>단축 속성을 사용하려면 font-size와 font-family를 필수로 입력해야 합니다.</p>
+<br>
+<h3><code>font-style</code></h3>
+<p>글자 스타일(기울기)을 지정<code>개별</code></p>
+<h3>속성 값</h3>
+<table>
+    <thead>
+        <tr>
+            <td>값</td>
+            <td>의미</td>
+            <td>기본값</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>normal</code></td>
+            <td>스타일 없음</td>
+            <td><code>normal</code></td>
+        </tr>
+        <tr>
+            <td><code>italic</code></td>
+            <td>이텔릭체(활자)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>oblique</code></td>
+            <td>기울어진 글자</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
