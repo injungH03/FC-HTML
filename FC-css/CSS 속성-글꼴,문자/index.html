@@ -88,3 +88,159 @@ font: 기울기 두께 크기 / 줄높이 글꼴;
         </tr>
     </tbody>
 </table>
+<br>
+<h3><code>font-weight</code></h3>
+<p>글자의 두께(가중치)를 지정<code>개별</code></p>
+<h3>속성 값</h3>
+<table>
+    <thead>
+        <tr>
+            <td>값</td>
+            <td>의미</td>
+            <td>기본값</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>normal</code></td>
+            <td>기본 글자 두께, <code>400</code>과 동일</td>
+            <td><code>normal(400)</code></td>
+        </tr>
+        <tr>
+            <td><code>bold</code></td>
+            <td>글자 두껍게, <code>700</code>과 동일</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>bolder</code></td>
+            <td>부모(상위) 요소보다 더 두껍게(<code>bold</code>보다 두껍다는 개념이 아님)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>lighter</code></td>
+            <td>부모(상위) 요소보다 더 얇게</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>숫자</code></td>
+            <td><code>100</code>부터 <code>900</code>까지의 100단위의 숫자 9개, <code>normal</code>과 <code>bold</code>이외의 <br>두께를 제공하는 글꼴(서체)을 위한 설정</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>일반적인 두께의 이름</h3>
+<p><code>font-weight</code>의 각 값은 일반적으로 다음과 같은 글꼴의 이름으로 표현됨</p>
+<table>
+    <thead>
+        <tr>
+            <td>값</td>
+            <td>일반적인 두께 이름</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>100</code></td>
+            <td>Thin(Hairline)</td>
+        </tr>
+        <tr>
+            <td><code>200</code></td>
+            <td>Extra Light(Ultra Light)</td>
+        </tr>
+        <tr>
+            <td><code>300</code></td>
+            <td>Light</td>
+        </tr>
+        <tr>
+            <td><code>400</code></td>
+            <td>Normal</td>
+        </tr>
+        <tr>
+            <td><code>500</code></td>
+            <td>Medium</td>
+        </tr>
+        <tr>
+            <td><code>600</code></td>
+            <td>Semi Bold(Demi Bold)</td>
+        </tr>
+        <tr>
+            <td><code>700</code></td>
+            <td>Bold</td>
+        </tr>
+        <tr>
+            <td><code>800</code></td>
+            <td>Extra Bold(Ultra Bold)</td>
+        </tr>
+        <tr>
+            <td><code>900</code></td>
+            <td>Black(Heavy)</td>
+        </tr>
+    </tbody>
+</table>
+<h3>상대적 두께</h3>
+<p><code>bolder</code><code>lighter</code>를 사용할 경우<br>
+부모(상위) 요소에게 상속받은 값에서 다음과 같이 계산됨</p>
+<table>
+    <thead>
+        <tr>
+            <td>상속 값</td>
+            <td><code>bolder</code></td>
+            <td><code>lighter</code></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>100</code></td>
+            <td><code>400</code></td>
+            <td><code>100</code></td>
+        </tr>
+        <tr>
+            <td><code>200</code></td>
+            <td><code>400</code></td>
+            <td><code>100</code></td>
+        </tr>
+        <tr>
+            <td><code>300</code></td>
+            <td><code>400</code></td>
+            <td><code>100</code></td>
+        </tr>
+        <tr>
+            <td><code>400</code></td>
+            <td><code>700</code></td>
+            <td><code>100</code></td>
+        </tr>
+        <tr>
+            <td><code>500</code></td>
+            <td><code>700</code></td>
+            <td><code>100</code></td>
+        </tr>
+        <tr>
+            <td><code>600</code></td>
+            <td><code>900</code></td>
+            <td><code>400</code></td>
+        </tr>
+        <tr>
+            <td><code>700</code></td>
+            <td><code>900</code></td>
+            <td><code>400</code></td>
+        </tr>
+        <tr>
+            <td><code>800</code></td>
+            <td><code>900</code></td>
+            <td><code>700</code></td>
+        </tr>
+        <tr>
+            <td><code>900</code></td>
+            <td><code>900</code></td>
+            <td><code>700</code></td>
+        </tr>
+    </tbody>
+</table>
+<h3>숫자 값과 두께의 불일치</h3>
+<p>글꼴(서체)의 정확한 두께를 숫자로 표현할 수 없는 경우에만..</p>
+<ol>
+    <li><code>400</code>이 주어지면 <code>500</code>을 사용하고, <code>500</code>이 불가하면 <code>500</code>미만의 다른 두께 사용</li>
+    <li><code>500</code>이 주어지면 <code>400</code>을 사용하고, <code>400</code>이 불가하면 <code>400</code>미만의 다른 두께 사용</li>
+    <li><code>400</code>미만 값이 주어지면, 가장 가까운 숫자의 얇은 두께 사용</li>
+    <li><code>500</code>초과 값이 주어지면, 가장 가까운 숫자의 두꺼운 두께를 사용</li>
+</ol>
