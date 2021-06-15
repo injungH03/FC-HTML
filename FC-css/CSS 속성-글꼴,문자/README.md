@@ -421,31 +421,30 @@ font-family: [글꼴후보1, 글꼴후보2...], 글꼴계열;
         <tr>
             <td><code>serif</code></td>
             <td>바탕체 계열</td>
-            <td style="font-family: serif">Hello World!</td>
+            <!-- <td style="font-family: serif">Hello World!</td> -->
         </tr>
         <tr>
             <td><code>sans-serif</code></td>
             <td>고딕체 계열</td>
-            <td style="font-family: sans-serif">Hello World!</td>
+            <!-- <td style="font-family: sans-serif">Hello World!</td> -->
         </tr>
         <tr>
             <td><code>monospace</code></td>
             <td>고정너비(가로폭이 동등한) 글꼴 계열</td>
-            <td style="font-family: monospace">Hello World!</td>
+            <!-- <td style="font-family: monospace">Hello World!</td> -->
         </tr>
         <tr>
             <td><code>cursive</code></td>
             <td>필기체 계열</td>
-            <td style="font-family: cursive">Hello World!</td>
+            <!-- <td style="font-family: cursive">Hello World!</td> -->
         </tr>
         <tr>
             <td><code>fantasy</code></td>
             <td>장식(재미있는 문자 표현을 포함하는)글꼴 계열</td>
-            <td style="font-family: fantasy">Hello World!</td>
+            <!-- <td style="font-family: fantasy">Hello World!</td> -->
         </tr>
     </tbody>
 </table>
-<br>
 <br>
 <h3>문자(Text)관련 속성</h3>
 <br>
@@ -510,6 +509,134 @@ font-family: [글꼴후보1, 글꼴후보2...], 글꼴계열;
         </tr>
     </tbody>
 </table>
-<p>위 표는 색상을 이용하는 모든 속성(property)의 값으로 사용할 수 있습니다.</p>
-<p><code>RGBA</code>:Red,Green,Blue,Alpha channel</p>
-<p><code>HSLA</code>:Hue,Saturation,Lightness,Alpha channel</p>
+<p>위 표는 색상을 이용하는 모든 속성(property)의 값으로 사용할 수 있습니다.<br>
+<code>RGBA</code>:Red,Green,Blue,Alpha channel<br>
+<code>HSLA</code>:Hue,Saturation,Lightness,Alpha channel</p>
+<br>
+<h3><code>text-align</code></h3>
+<p>문자 정렬 방식을 지정</p>
+<h3>속성 값</h3>
+<table>
+    <thead>
+        <tr>
+            <td>값</td>
+            <td>의미</td>
+            <td>기본값</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>left</code></td>
+            <td>왼쪽 정렬</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>right</code></td>
+            <td>오른쪽 정렬</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>center</td>
+            <td>가운데 정렬</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>justify</td>
+            <td>양쪽 맞춤</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p><code>direction</code> 속성(텍스트 방향 및 쓰기 방향 지정/ <code>ltr</code>,<code>rtl</code>)의 값에 의해서<br>
+<code>text-align</code>속성의'기본 값'이 변경될 수 있습니다.<br>
+일반적으로 <code>left</code>가 기본 값으로 사용됩니다.
+</p>
+<br>
+<h3><code>text-decoration</code></h3>
+<p>문자의 장식(line)을 설정</p>
+<h3>속성 값</h3>
+<table>
+    <thead>
+        <tr>
+            <td>값</td>
+            <td>의미</td>
+            <td>기본값</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>none</code></td>
+            <td>선 없음</td>
+            <td><code>none</code></td>
+        </tr>
+        <tr>
+            <td><code>underlind</code></td>
+            <td>밑줄을 지정</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>overline</code></td>
+            <td>윗줄을 지정</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>line-through</code></td>
+            <td>중앙 선(가로지르는)을 지정</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<h3><code>text-indent</code></h3>
+<p>(첫번째 줄의)들여쓰기를 지정</p>
+<p>음수 값(Negative Values)을 사용할 수 있습니다. <br>
+음수 값을 사용하면 첫째 줄은 왼쪽으로 들여쓰기(내어쓰기) 됩니다.</p>
+<br>
+<h3><code>letter-spacing</code></h3>
+<p>문자의 자간(글자 사이 간격)을 설정</p>
+<h3>속성 값</h3>
+<table>
+    <thead>
+        <tr>
+            <td>값</td>
+            <td>의미</td>
+            <td>기본값</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>normal</code></td>
+            <td>단어 사이의 일반 간격</td>
+            <td><code>normal</code></td>
+        </tr>
+        <tr>
+            <td>단위</td>
+            <td><code>px</code>,<code>em</code>,<code>cm</code>등 단위로 지정</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<h3>word-spacing</h3>
+<p>단어 사이(띄어쓰기)의 간격을 설정</p>
+<h3>속성 값</h3>
+<table>
+    <thead>
+        <tr>
+            <td>값</td>
+            <td>의미</td>
+            <td>기본값</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>normal</code></td>
+            <td>단어 사이의 일반 간격</td>
+            <td><code>normal</code></td>
+        </tr>
+        <tr>
+            <td>단위</td>
+            <td><code>px</code>,<code>em</code>,<code>cm</code>등 단위로 지정</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
