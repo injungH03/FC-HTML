@@ -414,7 +414,7 @@ font-family: [글꼴후보1, 글꼴후보2...], 글꼴계열;
         <tr>
             <td>계열</td>
             <td>의미</td>
-            <td>예시</td>
+            <!-- <td>예시</td> -->
         </tr>
     </thead>
     <tbody>
