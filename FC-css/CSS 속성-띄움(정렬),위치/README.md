@@ -37,8 +37,9 @@ img {
     float: left;
 }
 ```
+
 <h4>단순 띄움</h4>
-<img src="./img/단순띄움.png" width="450px" title="단순띄움 이미지" alt="ExImg1">
+<img src="./img/단순띄움.png" width="450px" title="단순띄움 이미지" alt="ExImg1">
 <p>요소에 <code>float</code>속성을 적용하면, 적용된 요소 주변으로 문자(text)가 흐르게 됩니다.</p>
 <h4>단순 해제</h4>
 <img src="./img/단순해제.png" width="450px" title="단순해제 이미지" alt="ExImg2">
