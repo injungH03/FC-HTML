@@ -234,3 +234,241 @@ img {
 <br>
 <h3>position</h3>
 <p>요소의 위치 지정 방법의 유형(기준)을 설정</p>
+<h3>속성 값</h3>
+<table>
+    <thead>
+        <tr>
+            <td>값</td>
+            <td>의미</td>
+            <td>기본값</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>static</code></td>
+            <td>유형(기준)없음/배치 불가능</td>
+            <td><code>static</code></td>
+        </tr>
+        <tr>
+            <td><code>relative</code></td>
+            <td>요소 자신을 기준으로 배치</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>absolute</code></td>
+            <td>위치 상 부모 요소를 기준으로 배치</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>fixed</code></td>
+            <td>브라우저(뷰포트)를 기준으로 배치</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>sticky</code></td>
+            <td>스크롤 영역 기준으로 배치</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<h4><code>top</code></h4>
+<p>요소의 <code>position</code> 기준에 맞는 '위쪽'에서의 거리(위치)를 설정</p>
+<table>
+    <thead>
+        <tr>
+            <td>값</td>
+            <td>의미</td>
+            <td>기본값</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>auto</code></td>
+            <td>브라우저가 계산</td>
+            <td><code>auto</code></td>
+        </tr>
+        <tr>
+            <td>단위</td>
+            <td><code>px</code>,<code>em</code>,<code>cm</code>등 단위로 지정</td>
+            <td><code>0</code></td>
+        </tr>
+        <tr>
+            <td><code>%</code></td>
+            <td>부모(위치 상의 부모(조상)) 요소의 세로 너비의 비율로 지정, 음수 값 허용</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<h4><code>bottom</code></h4>
+<p>요소의 <code>position</code> 기준에 맞는 '아래쪽'에서의 거리(위치)를 설정</p>
+<table>
+    <thead>
+        <tr>
+            <td>값</td>
+            <td>의미</td>
+            <td>기본값</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>auto</code></td>
+            <td>브라우저가 계산</td>
+            <td><code>auto</code></td>
+        </tr>
+        <tr>
+            <td>단위</td>
+            <td><code>px</code>,<code>em</code>,<code>cm</code>등 단위로 지정</td>
+            <td><code>0</code></td>
+        </tr>
+        <tr>
+            <td><code>%</code></td>
+            <td>부모(위치 상의 부모(조상)) 요소의 세로 너비의 비율로 지정, 음수 값 허용</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<h4><code>left</code></h4>
+<p>요소의 <code>position</code> 기준에 맞는 '왼쪽'에서의 거리(위치)를 설정</p>
+<table>
+    <thead>
+        <tr>
+            <td>값</td>
+            <td>의미</td>
+            <td>기본값</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>auto</code></td>
+            <td>브라우저가 계산</td>
+            <td><code>auto</code></td>
+        </tr>
+        <tr>
+            <td>단위</td>
+            <td><code>px</code>,<code>em</code>,<code>cm</code>등 단위로 지정</td>
+            <td><code>0</code></td>
+        </tr>
+        <tr>
+            <td><code>%</code></td>
+            <td>부모(위치 상의 부모(조상)) 요소의 가로 너비의 비율로 지정, 음수 값 허용</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<h4><code>right</code></h4>
+<p>요소의 <code>position</code> 기준에 맞는 '오른쪽'에서의 거리(위치)를 설정</p>
+<table>
+    <thead>
+        <tr>
+            <td>값</td>
+            <td>의미</td>
+            <td>기본값</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>auto</code></td>
+            <td>브라우저가 계산</td>
+            <td><code>auto</code></td>
+        </tr>
+        <tr>
+            <td>단위</td>
+            <td><code>px</code>,<code>em</code>,<code>cm</code>등 단위로 지정</td>
+            <td><code>0</code></td>
+        </tr>
+        <tr>
+            <td><code>%</code></td>
+            <td>부모(위치 상의 부모(조상)) 요소의 가로 너비의 비율로 지정, 음수 값 허용</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<h3><code>sticky</code></h3>
+<p>스크롤 영역 기준으로 배치</p>
+
+```
+.box {
+    position: sticky;
+    top: 0;
+}
+```
+<p>IE 지원 불가</p>
+<br>
+<h3>요소 쌓임 순서(Stack order)</h3>
+<p>요소가 쌓여 있는 순서를 통해<br>어떤 요소가 사용자와 가깝게 있는지(더 위에 쌓이는지)를 결정(Z축)</p>
+<ol>
+    <li><code>static</code>을 제외한 <code>position</code>속성의 값이 있을 경우 가장 위에 쌓임(값은 무관)</li>
+    <li><code>position</code>이 모두 존재한다면 <code>z-index</code>속성의 숫자 값이 높을 수록 위에 쌓임</li>
+    <li><code>position</code>속성의 값이 있고, <code>z-index</code>속성의 숫자 값이 같다면,<br>'HTML'의 마지막 코드일 수록 위에 쌓임(나중에 작성한 코드(요소))</li>
+</ol>
+<p>position > z-index > HTML마지막코드</p>
+
+<h3><code>display</code> 수정</h3>
+<p><code>absolute</code>,<code>fixed</code>속성 값이 적용된 요소는 <code>display</code>속성의 값이 대부분 <code>block</code>으로 수정됨</p>
+<table>
+    <thead>
+        <tr>
+            <td>지정 값</td>
+            <td>변화 값</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>inline</code></td>
+            <td><code>block</code></td>
+        </tr>
+        <tr>
+            <td><code>inline-block</code></td>
+            <td><code>block</code></td>
+        </tr>
+        <tr>
+            <td><code>inline-table</code></td>
+            <td><code>block</code></td>
+        </tr>
+        <tr>
+            <td><code>table-row</code></td>
+            <td><code>block</code></td>
+        </tr>
+        <tr>
+            <td><code>table-row-group</code></td>
+            <td><code>block</code></td>
+        </tr>
+        <tr>
+            <td><code>table-column</code></td>
+            <td><code>block</code></td>
+        </tr>
+        <tr>
+            <td><code>table-column-group</code></td>
+            <td><code>block</code></td>
+        </tr>
+        <tr>
+            <td><code>table-cell</code></td>
+            <td><code>block</code></td>
+        </tr>
+        <tr>
+            <td><code>table-caption</code></td>
+            <td><code>block</code></td>
+        </tr>
+        <tr>
+            <td><code>table-header-group</code></td>
+            <td><code>block</code></td>
+        </tr>
+        <tr>
+            <td><code>table-footer-group</code></td>
+            <td><code>block</code></td>
+        </tr>
+        <tr>
+            <td><code>flex</code> </td>
+            <td><code>flex</code>/<code>position</code>속성 효과 없음</td>
+        </tr>
+        <tr>
+            <td><code>inline-flex</code></td>
+            <td><code>inline-flex</code>/<code>position</code>속성 효과없음</td>
+        </tr>
+        <tr>
+            <td>그 외</td>
+            <td>변화없음</td>
+        </tr>
+    </tbody>
+</table>
