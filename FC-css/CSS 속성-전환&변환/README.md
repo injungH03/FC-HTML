@@ -34,7 +34,6 @@
         </tr>
     </tbody>
 </table>
-<br>
 <h3><code>transition-property</code></h3>
 <p>전환 효과를 사용할 속성 이름을 설정<code>개별</code></p>
 <table>
@@ -437,7 +436,7 @@ img {
     transform: rotateX(45deg);
 }
 ```
-
+<br>
 <h3><code>perspective</code></h3>
 <p>하위 요소를 관찰하는 원근 거리를 설정</p>
 <table>
