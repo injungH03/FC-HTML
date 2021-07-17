@@ -1,7 +1,5 @@
 <h2>기본문법</h2>
 
-***
-
 ```
 선택자 {
 속성: 속성값;
@@ -270,7 +268,6 @@ color: red;
 </ul>
 ```
 <br>
-***
 
 ```css
 .fruits li:nth-child(2n) {
@@ -304,7 +301,6 @@ color: red;
 <!-- 3번째 요소부터 이후 요소들을 선택합니다. -->
 ```
 <br>
-***
 
 ```css
 .fruits p:nth-child(1) {
@@ -370,8 +366,6 @@ font-size: 40px;
 color: red;
 }
 ```
-
-***
 
 <h3>가상 요소 선택자(Pseudo-Elements Selectors)</h3>
 <br>
