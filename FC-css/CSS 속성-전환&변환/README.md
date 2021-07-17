@@ -1,4 +1,4 @@
-<h3>Transitions</h3>
+<h2>Transitions</h2>
 <p>CSS 속성의 전환 효과를 지정</p>
 <br>
 <h3><code>transition</code></h3>
@@ -582,6 +582,6 @@ img {
 </p>
 
 <img src="./img/matrix.png" width="500px" alt="matrixImg">
-<img src="./img/matrix2.png" width="500px" alt="matrixImg2">
+<img src="./img/matrix2-1.png" width="500px" alt="matrixImg2">
 <img src="./img/matrix3.png" width="500px" alt="matrixImg3">
 <img src="./img/matrix4.png" width="500px" alt="matrixImg4">
