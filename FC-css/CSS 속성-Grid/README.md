@@ -11,7 +11,7 @@
 
 <p>파이어폭스 브라우저</a>를 사용해 테스트할 것을 추천합니다.<br>개발자 도구를 열고 요소를 검색해 표시된 <code>grid</code> 버튼을 선택합니다.</p>
 <p>CSS Grid를 처음 시작하시는 분들을 위해 간단한 테스트 영상을 준비했습니다.</p>
-[테스트 영상](https://youtu.be/b0aSTppYUFE)
+Link: [테스트 영상][https://youtu.be/b0aSTppYUFE]
 <br>
 <p>다음은 위 영상과 이하 예제들에서 사용한 샘플 코드입니다.<br>SCSS로 작성되어 있지만, CSS 문법을 포함할 수
     있음으로 <code>// Test here!</code> 이하에 <code>.container</code>와 <code>.item</code>을 정의해 보세요.<br>혹은 새로운 환경에서 Grid를 테스트해
@@ -709,9 +709,9 @@ footer { grid-area: footer; }
     않으며(Deprecated), <code>gap</code>(<code>row-gap</code>, <code>column-gap</code>)로 교체되었습니다.<br>하지만 일부 버전의 브라우저 지원을 위해
     <code>grid-</code> 접두사의 사용을 고려할 수 있습니다.</p>
 <br>
-[[css-grid][css-multicol][css-flexbox][css-tables] Proposal for Various Gap Issues.](https://drafts.csswg.org/css-grid/#change-2016-grid-gap)<br>
-[[css-grid] grid-gap is deprecated.](https://github.com/postcss/autoprefixer/issues/1046)<br>
-[https://drafts.csswg.org/css-grid/#change-2016-grid-gap](https://drafts.csswg.org/css-grid/#change-2016-grid-gap)
+[[css-grid][css-multicol][css-flexbox][css-tables] Proposal for Various Gap Issues.][https://drafts.csswg.org/css-grid/#change-2016-grid-gap]<br>
+[[css-grid] grid-gap is deprecated.][https://github.com/postcss/autoprefixer/issues/1046]<br>
+[https://drafts.csswg.org/css-grid/#change-2016-grid-gap][https://drafts.csswg.org/css-grid/#change-2016-grid-gap]
 
 <br>
 <br>
