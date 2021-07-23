@@ -1,5 +1,6 @@
 <h1>CSS Grid<h1>
 <br>
+
 <p>CSS Grid(그리드)는 2차원(행과 열)의 레이아웃 시스템을 제공합니다.<br>Flexible Box도 훌륭하지만 비교적 단순한 1차원 레이아웃을 위하며, 좀 더 복잡한 레이아웃을 위해 우리는 CSS
     Grid를 사용할 수 있습니다.</p>
 <blockquote>
@@ -1892,6 +1893,6 @@ footer.item { grid-area: footer; }
         </tr>
     </tbody>
 </table>
-
 <br>
+
 [출처](https://heropy.blog/2019/08/17/css-grid/)
