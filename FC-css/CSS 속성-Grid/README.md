@@ -10,10 +10,9 @@
 <h2>CSS Grid</h2>
 
 <p>파이어폭스 브라우저</a>를 사용해 테스트할 것을 추천합니다.<br>개발자 도구를 열고 요소를 검색해 표시된 <code>grid</code> 버튼을 선택합니다.</p>
-<p><img src="/images/screenshot/css-grid/use-to-firefox.jpg" alt="CSS Grid"></p>
 <p>CSS Grid를 처음 시작하시는 분들을 위해 간단한 테스트 영상을 준비했습니다.</p>
-[테스트 영상][https://youtu.be/b0aSTppYUFE]
-
+[테스트 영상](https://youtu.be/b0aSTppYUFE)
+<br>
 <p>다음은 위 영상과 이하 예제들에서 사용한 샘플 코드입니다.<br>SCSS로 작성되어 있지만, CSS 문법을 포함할 수
     있음으로 <code>// Test here!</code> 이하에 <code>.container</code>와 <code>.item</code>을 정의해 보세요.<br>혹은 새로운 환경에서 Grid를 테스트해
     보세요.</p>
@@ -26,100 +25,109 @@
     <div class="item">4</div>
     <div class="item">5</div>
     <div class="item">6</div>
-  </div>
+</div>
 ```
 ```SCSS
 // Init~ Don't touch here!
 $color: #555;
+
 body {
-  padding: 80px;
-  font-family: 'NanumSquareRound',sans-serif;
-  color: $color;
+    padding: 80px;
+    font-family: 'NanumSquareRound', sans-serif;
+    color: $color;
 }
+
 .container {
-  // width: 380px;
-  // height: 250px;
-  border: 10px solid rgba(black, .1);
-  border-radius: 10px;
-  display: grid;
-}
-.item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
-  position: relative;
-  font-size: 20px;
-  color: $color;
-  font-weight: 900;
-  text-shadow: 3px 0 0 rgba(white, .5);
-  &::before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    border: 4px solid $color;
+    // width: 380px;
+    // height: 250px;
+    border: 10px solid rgba(black, .1);
     border-radius: 10px;
+    display: grid;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
     box-sizing: border-box;
-    width: calc(100% - 10px);
-    height: calc(100% - 10px);
-    z-index: -1;
-  }
-  $colors: (tomato, orange, limegreen, dodgerblue, hotpink, darkgray, crimson, orangered, lawngreen, aqua, royalblue, wheat, brown, gray, salmon, deeppink, gold, springgreen, slateblue, darkslategray);
-  @each $color in $colors {
-    $index: index($colors, $color);
-    &:nth-child(#{$index})::before {
-      background-color: rgba($color, .8);
+    position: relative;
+    font-size: 20px;
+    color: $color;
+    font-weight: 900;
+    text-shadow: 3px 0 0 rgba(white, .5);
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        border: 4px solid $color;
+        border-radius: 10px;
+        box-sizing: border-box;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        z-index: -1;
     }
-  }
-  &::after {
-    content: "";
-    width: 10px;
-    height: 50%;
-    background: white;
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    border-radius: 100px;
-    opacity: .3;
-    z-index: -1;
-  }
+
+    $colors: (tomato, orange, limegreen, dodgerblue, hotpink, darkgray, crimson, orangered, lawngreen, aqua, royalblue, wheat, brown, gray, salmon, deeppink, gold, springgreen, slateblue, darkslategray);
+
+    @each $color in $colors {
+        $index: index($colors, $color);
+
+        &:nth-child(#{$index})::before {
+            background-color: rgba($color, .8);
+        }
+    }
+
+    &::after {
+        content: "";
+        width: 10px;
+        height: 50%;
+        background: white;
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        border-radius: 100px;
+        opacity: .3;
+        z-index: -1;
+    }
 }
 
 
 // Test here!
 .container {
-  width: 400px;
-  display: grid;
-  grid-template-rows: repeat(2, 100px);
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+    width: 400px;
+    display: grid;
+    grid-template-rows: repeat(2, 100px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 100px;
 }
-.item:nth-child(1) {
-  grid-column: 1 / 4;
-}
-.item:nth-child(3) {
-  grid-column: span 2;
-}
-View Compiled
 
-Resources
+.item:nth-child(1) {
+    grid-column: 1 / 4;
+}
+
+.item:nth-child(3) {
+    grid-column: span 2;
+}
+
+View Compiled Resources
 ```
 ```CSS
 body {
     padding: 80px;
     font-family: "NanumSquareRound", sans-serif;
     color: #555;
-  }
-  
-  .container {
+}
+
+.container {
     border: 10px solid rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     display: grid;
-  }
-  
-  .item {
+}
+
+.item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,8 +138,9 @@ body {
     color: #555;
     font-weight: 900;
     text-shadow: 3px 0 0 rgba(255, 255, 255, 0.5);
-  }
-  .item::before {
+}
+
+.item::before {
     content: "";
     position: absolute;
     top: 5px;
@@ -142,68 +151,89 @@ body {
     width: calc(100% - 10px);
     height: calc(100% - 10px);
     z-index: -1;
-  }
-  .item:nth-child(1)::before {
+}
+
+.item:nth-child(1)::before {
     background-color: rgba(255, 99, 71, 0.8);
-  }
-  .item:nth-child(2)::before {
+}
+
+.item:nth-child(2)::before {
     background-color: rgba(255, 165, 0, 0.8);
-  }
-  .item:nth-child(3)::before {
+}
+
+.item:nth-child(3)::before {
     background-color: rgba(50, 205, 50, 0.8);
-  }
-  .item:nth-child(4)::before {
+}
+
+.item:nth-child(4)::before {
     background-color: rgba(30, 144, 255, 0.8);
-  }
-  .item:nth-child(5)::before {
+}
+
+.item:nth-child(5)::before {
     background-color: rgba(255, 105, 180, 0.8);
-  }
-  .item:nth-child(6)::before {
+}
+
+.item:nth-child(6)::before {
     background-color: rgba(169, 169, 169, 0.8);
-  }
-  .item:nth-child(7)::before {
+}
+
+.item:nth-child(7)::before {
     background-color: rgba(220, 20, 60, 0.8);
-  }
-  .item:nth-child(8)::before {
+}
+
+.item:nth-child(8)::before {
     background-color: rgba(255, 69, 0, 0.8);
-  }
-  .item:nth-child(9)::before {
+}
+
+.item:nth-child(9)::before {
     background-color: rgba(124, 252, 0, 0.8);
-  }
-  .item:nth-child(10)::before {
+}
+
+.item:nth-child(10)::before {
     background-color: rgba(0, 255, 255, 0.8);
-  }
-  .item:nth-child(11)::before {
+}
+
+.item:nth-child(11)::before {
     background-color: rgba(65, 105, 225, 0.8);
-  }
-  .item:nth-child(12)::before {
+}
+
+.item:nth-child(12)::before {
     background-color: rgba(245, 222, 179, 0.8);
-  }
-  .item:nth-child(13)::before {
+}
+
+.item:nth-child(13)::before {
     background-color: rgba(165, 42, 42, 0.8);
-  }
-  .item:nth-child(14)::before {
+}
+
+.item:nth-child(14)::before {
     background-color: rgba(128, 128, 128, 0.8);
-  }
-  .item:nth-child(15)::before {
+}
+
+.item:nth-child(15)::before {
     background-color: rgba(250, 128, 114, 0.8);
-  }
-  .item:nth-child(16)::before {
+}
+
+.item:nth-child(16)::before {
     background-color: rgba(255, 20, 147, 0.8);
-  }
-  .item:nth-child(17)::before {
+}
+
+.item:nth-child(17)::before {
     background-color: rgba(255, 215, 0, 0.8);
-  }
-  .item:nth-child(18)::before {
+}
+
+.item:nth-child(18)::before {
     background-color: rgba(0, 255, 127, 0.8);
-  }
-  .item:nth-child(19)::before {
+}
+
+.item:nth-child(19)::before {
     background-color: rgba(106, 90, 205, 0.8);
-  }
-  .item:nth-child(20)::before {
+}
+
+.item:nth-child(20)::before {
     background-color: rgba(47, 79, 79, 0.8);
-  }
-  .item::after {
+}
+
+.item::after {
     content: "";
     width: 10px;
     height: 50%;
@@ -214,23 +244,23 @@ body {
     border-radius: 100px;
     opacity: 0.3;
     z-index: -1;
-  }
-  
-  .container {
+}
+
+.container {
     width: 400px;
     display: grid;
     grid-template-rows: repeat(2, 100px);
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 100px;
-  }
-  
-  .item:nth-child(1) {
+}
+
+.item:nth-child(1) {
     grid-column: 1/4;
-  }
-  
-  .item:nth-child(3) {
+}
+
+.item:nth-child(3) {
     grid-column: span 2;
-  }
+}
 ```
 <br>
 <h1>Grid Properties</h1>
@@ -434,17 +464,19 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
 ```
 ```css
 /* 각 행의 크기를 정의합니다. */
-  .container {
+.container {
     grid-template-rows: 100px 200px;
-  }
-  /* 동시에 각 라인의 이름도 정의할 수 있습니다. */
-  .container {
+}
+
+/* 동시에 각 라인의 이름도 정의할 수 있습니다. */
+.container {
     grid-template-rows: [first] 100px [second] 200px [third];
-  }
-  /* 라인에 중복된 이름을 지정할 수 있습니다. */
-  .container {
+}
+
+/* 라인에 중복된 이름을 지정할 수 있습니다. */
+.container {
     grid-template-rows: [row1-start] 100px [row1-end row2-start] 200px [row2-end];
-  }
+}
 ```
 
 <p>각 라인은 행(Row, Track)과 열(Column, Track)의 개수대로 숫자(양수/음수) 라인 이름이 자동으로 지정되어 있어서, 꼭 필요한 경우가 아니면 라인 이름을 정의할 필요가 없습니다.</p>
@@ -453,15 +485,14 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
 .container {
     grid-template-rows: 100px 200px;
     /* grid-template-rows: [1 -3] 100px [2 -2] 200px [3 -1]; */
-  }
-```
-```css
-.container {
+}
+
+``` ```css .container {
     width: 400px;
     display: grid;
     grid-template-rows: repeat(3, 100px);
     grid-template-columns: repeat(3, 1fr);
-  }
+}
 ```
 <p><img src="./img/grid-template-rows-1.jpeg" alt="CSS Grid"></p>
 
@@ -478,22 +509,23 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
     display: grid;
     grid-template-columns: 1열크기 2열크기 ...;
     grid-template-columns: [선이름] 1열크기 [선이름] 2열크기 [선이름] ...;
-  }
+}
 ```
-
 ```css
-    /* 각 열의 크기를 정의합니다. */
-  .container {
+/* 각 열의 크기를 정의합니다. */
+.container {
     grid-template-columns: 100px 200px;
-  }
-  /* 동시에 각 라인의 이름도 정의할 수 있습니다. */
-  .container {
+}
+
+/* 동시에 각 라인의 이름도 정의할 수 있습니다. */
+.container {
     grid-template-columns: [first] 100px [second] 200px [third];
-  }
-  /* 라인에 중복된 이름을 지정할 수 있습니다. */
-  .container {
+}
+
+/* 라인에 중복된 이름을 지정할 수 있습니다. */
+.container {
     grid-template-columns: [col1-start] 100px [col1-end col2-start] 200px [col2-end];
-  }
+}
 ```
 <p>만약 <code>1200px</code> 너비의 ‘12컬럼 그리드 템플릿’을 정의한다면 다음과 작성할 수 있습니다.</p>
 
@@ -501,7 +533,7 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
 .container {
     width: 1200px;
     grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
-  }
+}
 ```
 <p>12개의 열(컬럼) 크기를 하나씩 지정했습니다만, 이 방법은 당연히 입력도 관리도 힘들겠죠!<br><code>repeat()</code> 함수를 사용하면 위 내용을 다음과 같이 간소화할 수 있습니다.</p>
 
@@ -509,7 +541,7 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
 .container {
     width: 1200px;
     grid-template-columns: repeat(12, 100px);
-  }
+}
 ```
 <p>컬럼을 크기를 <code>fr</code> 단위를 사용해 다음과 같이 비율로 지정할 수도 있습니다.<br>각 컬럼은 비율에 맞게 출력되기 때문에 컨테이너의 너비가 가변해도 열 크기를 수정할 필요가 없습니다.
 </p>
@@ -521,7 +553,7 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
 .container {
     width: 80%;
     grid-template-columns: repeat(12, 1fr);
-  }
+}
 ```
 <p><code>repeat()</code> 함수는 2번째 인수를 반복하기 때문에 다음과 같이 활용할 수 있습니다.</p>
 
@@ -535,153 +567,168 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
     /* grid-template-columns: 1fr 2fr 3fr 1fr 2fr 3fr 1fr 2fr 3fr 1fr 2fr 3fr; */
 }
 ```
-
+<br>
 <h2>grid-template-areas</h2>
-
 <p>지정된 그리드 영역 이름(<code>grid-area</code>)을 참조해 그리드 템플릿을 생성합니다.</p>
 <blockquote>
     <p><code>grid-area</code>는 Grid Container가 아닌 Grid Item에 적용하는 속성입니다.</p>
 </blockquote>
-<pre><code class="css">
-    .container {
-    display: grid;
-    grid-template-rows: repeat(3, 100px);
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-      &quot;header header header&quot;
-      &quot;main main aside&quot;
-      &quot;footer footer footer&quot;;
-  }
-  header { grid-area: header; }
-  main   { grid-area: main;   }
-  aside  { grid-area: aside;  }
-  footer { grid-area: footer; }
-  </code></pre>
+
+```css
+.container {
+  display: grid;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "header header header"
+    "main main aside"
+    "footer footer footer";
+}
+header { grid-area: header; }
+main   { grid-area: main;   }
+aside  { grid-area: aside;  }
+footer { grid-area: footer; }
+```
 <p><img src="./img/grid-template-areas-1.jpeg" alt="CSS Grid"></p>
 <p><code>.</code>(마침표)를 사용하거나 명시적으로 <code>none</code>을 입력해 빈 영역을 정의할 수 있습니다.</p>
 
-<pre><code class="css">.container {
-    display: grid;
-    grid-template-rows: repeat(4, 100px);
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-      &quot;header header header&quot;
-      &quot;main . .&quot;
-      &quot;main . aside&quot;
-      &quot;footer footer footer&quot;;
-  }
-  header { grid-area: header; }
-  main   { grid-area: main;   }
-  aside  { grid-area: aside;  }
-  footer { grid-area: footer; }
-  </code></pre>
+```css
+.container {
+  display: grid;
+  grid-template-rows: repeat(4, 100px);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "header header header"
+    "main . ."
+    "main . aside"
+    "footer footer footer";
+}
+header { grid-area: header; }
+main   { grid-area: main;   }
+aside  { grid-area: aside;  }
+footer { grid-area: footer; }
+```
 <p><img src="./img/grid-template-areas-2.jpeg" alt="CSS Grid"></p>
-
+<br>
 <h2>grid-template</h2>
-
 <p><code>grid-template-rows</code>, <code>grid-template-columns</code> 그리고 <code>grid-template-areas</code>의 단축 속성입니다.
 </p>
 
-<pre><code class="css">.container {
-    grid-template: &lt;grid-template-rows&gt; / &lt;grid-template-columns&gt;;
-    grid-template: &lt;grid-template-areas&gt;;
-  }
-  </code></pre>
+```css
+.container {
+  grid-template: <grid-template-rows> / <grid-template-columns>;
+  grid-template: <grid-template-areas>;
+}
+```
 <p>다음과 같이 작성할 수도 있습니다.</p>
 
-<pre><code class="css">.container {
-    grid-template:
-      [1행시작선이름] &quot;AREAS&quot; 행너비 [1행끝선이름]
-      [2행시작선이름] &quot;AREAS&quot; 행너비 [2행끝선이름]
-      / &lt;grid-template-columns&gt;;
-  }
-  </code></pre>
-
-<pre><code class="css">.container {
-    display: grid;
-    grid-template:
-      &quot;header header header&quot; 80px
-      &quot;main main aside&quot; 350px
-      &quot;footer footer footer&quot; 130px
-      / 2fr 100px 1fr;
-  }
-  header { grid-area: header; }
-  main   { grid-area: main; }
-  aside  { grid-area: aside; }
-  footer { grid-area: footer; }
-  </code></pre>
+```css
+.container {
+  grid-template:
+    [1행시작선이름] "AREAS" 행너비 [1행끝선이름]
+    [2행시작선이름] "AREAS" 행너비 [2행끝선이름]
+    / <grid-template-columns>;
+}
+```
+```css
+.container {
+  display: grid;
+  grid-template:
+    "header header header" 80px
+    "main main aside" 350px
+    "footer footer footer" 130px
+    / 2fr 100px 1fr;
+}
+header { grid-area: header; }
+main   { grid-area: main; }
+aside  { grid-area: aside; }
+footer { grid-area: footer; }
+```
 <p>위 예제의 컨테이너는 다음과 같이 해석할 수 있습니다.</p>
 
-<pre><code class="css">.container {
-    display: grid;
-    grid-template-rows: 80px 350px 130px;
-    grid-template-columns: 2fr 100px 1fr;
-    grid-template-areas:
-      &quot;header header header&quot;
-      &quot;main main aside&quot;
-      &quot;footer footer footer&quot;;
-  }
-  </code></pre>
+```css
+.container {
+  display: grid;
+  grid-template-rows: 80px 350px 130px;
+  grid-template-columns: 2fr 100px 1fr;
+  grid-template-areas:
+    "header header header"
+    "main main aside"
+    "footer footer footer";
+}
+```
+<br>
 <h2>row-gap(grid-row-gap)</h2>
 <p>각 행과 행 사이의 간격(Gutter)을 지정합니다.</p>
 <blockquote>
     <p>더 명확하게는 그리드 선(Grid Line)의 크기를 지정한다고 표현할 수 있습니다.</p>
 </blockquote>
 
-<pre><code class="css">.container {
-    row-gap: 크기;
-  }
-  </code></pre>
+```css
+.container {
+  row-gap: 크기;
+}
+```
+<br>
 <h2>column-gap(grid-column-gap)</h2>
 <p>각 열과 열 사이의 간격(Gutter)을 지정합니다.</p>
 
-<pre><code class="css">.container {
-    column-gap: 크기;
-  }
-  </code></pre>
+```css
+.container {
+  column-gap: 크기;
+}
+```
+<br>
 <h2>gap(grid-gap)</h2>
 <p>각 행과 행, 열과 열 사이의 간격(Gutter)을 지정합니다.</p>
-<pre><code class="css">.container {
-    gap: &lt;grid-row-gap&gt; &lt;grid-column-gap&gt;;
-  }
-  </code></pre>
-<pre><code class="css">.container {
-    display: grid;
-    grid-template-rows: repeat(2, 150px);
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px 10px;
-  }
-  /* 하나의 값으로 통일할 수 있습니다. */
-  .container {
-    gap: 10px;  /* row-gap: 10px; + column-gap: 10px; */
-  }
-  /* 하나의 값만 적용하고자 한다면 다음과 같이 사용할 수 있습니다. */
-  .container {
-    gap: 10px 0; /* row-gap */
-    gap: 0 10px; /* column-gap */
-  }
-  </code></pre>
+
+```css
+.container {
+  gap: <grid-row-gap> <grid-column-gap>;
+}
+```
+```css
+.container {
+  display: grid;
+  grid-template-rows: repeat(2, 150px);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 10px;
+}
+/* 하나의 값으로 통일할 수 있습니다. */
+.container {
+  gap: 10px;  /* row-gap: 10px; + column-gap: 10px; */
+}
+/* 하나의 값만 적용하고자 한다면 다음과 같이 사용할 수 있습니다. */
+.container {
+  gap: 10px 0; /* row-gap */
+  gap: 0 10px; /* column-gap */
+}
+```
 <p><img src="./img/gap-1.jpeg" alt="CSS Grid"></p>
 <p><code>grid-gap</code>(<code>grid-row-gap</code>, <code>grid-column-gap</code>)의 접두사 <code>grid-</code>는 더 이상 사용되지
     않으며(Deprecated), <code>gap</code>(<code>row-gap</code>, <code>column-gap</code>)로 교체되었습니다.<br>하지만 일부 버전의 브라우저 지원을 위해
     <code>grid-</code> 접두사의 사용을 고려할 수 있습니다.</p>
 <br>
-[[css-grid][css-multicol][css-flexbox][css-tables] Proposal for Various Gap Issues.][https://drafts.csswg.org/css-grid/#change-2016-grid-gap]
-[[css-grid] grid-gap is deprecated.][https://github.com/postcss/autoprefixer/issues/1046]
-[https://drafts.csswg.org/css-grid/#change-2016-grid-gap][https://drafts.csswg.org/css-grid/#change-2016-grid-gap]
+[[css-grid][css-multicol][css-flexbox][css-tables] Proposal for Various Gap Issues.](https://drafts.csswg.org/css-grid/#change-2016-grid-gap)<br>
+[[css-grid] grid-gap is deprecated.](https://github.com/postcss/autoprefixer/issues/1046)<br>
+[https://drafts.csswg.org/css-grid/#change-2016-grid-gap](https://drafts.csswg.org/css-grid/#change-2016-grid-gap)
 
 <br>
-
+<br>
 <h2>grid-auto-rows</h2>
 
 <p>암시적 행(Track)의 크기를 정의합니다.<br>아이템(Item)이 <code>grid-template-rows</code>로 정의한 명시적 행 외부에 배치되는 경우 암시적 행의 크기가 적용됩니다.</p>
-<pre><code class="html">&lt;div class=&quot;container&quot;&gt;
+
+<pre><code class="html">
+&lt;div class=&quot;container&quot;&gt;
     &lt;div class=&quot;item&quot;&gt;1&lt;/div&gt;
     &lt;div class=&quot;item&quot;&gt;2&lt;/div&gt;
     &lt;div class=&quot;item&quot;&gt;3&lt;/div&gt;
   &lt;/div&gt;
   </code></pre>
-<pre><code class="css">.container {
+
+<pre><code class="css">
+.container {
     width: 300px;
     height: 200px;
     display: grid;
@@ -693,6 +740,7 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
     grid-row: 3 / 4;
   }
   </code></pre>
+
 <p><img src="./img/grid-auto-rows-1.jpeg" alt="CSS Grid"></p>
 <h2>grid-auto-columns</h2>
 <p>암시적 열(Track)의 크기를 정의합니다.<br>아이템(Item)이 <code>grid-template-columns</code>로 정의한 명시적 열 외부에 배치되는 경우 암시적 열의 크기가 적용됩니다.
@@ -1774,3 +1822,6 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
         </tr>
     </tbody>
 </table>
+
+<br>
+[출처][https://heropy.blog/2019/08/17/css-grid/]
