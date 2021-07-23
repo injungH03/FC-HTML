@@ -1,4 +1,4 @@
-<h2>CSS Flex(Flexible Box</h2>
+<h2>CSS Flex(Flexible Box)</h2>
 
 <p>대부분 사이트는 전체 레이아웃이 수직 구성이며 ‘위-아래’로 스크롤 하여 사용합니다.
 <br>레이아웃을 구성할 때 가장 많이 사용하는 요소(Elements)들이 기본적으로 블록(Block) 개념으로 표시(Display)되며 
