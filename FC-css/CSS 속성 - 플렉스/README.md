@@ -13,10 +13,10 @@
 <p>시작하기에 앞서 간단한 얘제를 살펴봅시다.<br><code>float</code> 속성을 이용한 수평 구성의 경우 다음과 같이 스타일을 작성할 수 있습니다.</p>
 
 ```html
-&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;clear-element&quot;&gt;&lt;/div&gt;
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="clear-element"></div>
 ```
 ```css
 .box {
@@ -32,11 +32,11 @@
 이름(class)의 다음(next) 요소도 있어야 하기 때문에 실제 사용엔 매우 불편하며 명확하지 않은 방법으로써 많은 경우 아래 방식을 사용합니다.</p>
 
 ```html
-&lt;div class=&quot;clearfix&quot;&gt;
-&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
+<div class="clearfix">
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+</div>
 ```
 ```css
 /* IE 핵이나 기타 방식을 제외하고 가장 원리에 충실한 방법 */
@@ -56,11 +56,11 @@
 <code>clearfix</code>를 적용합니다.</p><p>그러면 Flexible Box(이하 Flex)는 어떻게 작성할 수 있을까요?<br>아주 간단합니다.
 
 ```html
-&lt;div class=&quot;box-container&quot;&gt;
-&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
+<div class="box-container">
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+</div>
 ```
 ```css
 .box-container {
