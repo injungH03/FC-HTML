@@ -857,4 +857,4 @@ align-self: 정렬방법;
 ```
 <img src="./img/flex-align-self.jpeg" alt="Flex">
 
-[출처][https://heropy.blog/2018/11/24/css-flexible-box/]
+[출처](https://heropy.blog/2018/11/24/css-flexible-box/)

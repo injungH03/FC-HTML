@@ -633,7 +633,7 @@ column-width: 너비;
 column-count: 개수;
 ```
 
-[Lorem Ipsum][https://www.lipsum.com/]
+[Lorem Ipsum](https://www.lipsum.com/)
 
 <h3><code>column-gap</code></h3>
 <p>단과 단 사이의 간격 설정</p>

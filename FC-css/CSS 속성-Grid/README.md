@@ -1,6 +1,5 @@
 <h1>CSS Grid<h1>
 <br>
-
 <p>CSS Grid(그리드)는 2차원(행과 열)의 레이아웃 시스템을 제공합니다.<br>Flexible Box도 훌륭하지만 비교적 단순한 1차원 레이아웃을 위하며, 좀 더 복잡한 레이아웃을 위해 우리는 CSS
     Grid를 사용할 수 있습니다.</p>
 <blockquote>
@@ -448,7 +447,30 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
     display: grid;
 }
 ```
+```html
+<div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+</div>
+<div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+</div>
+```
+```css
+.container {
+    display: grid;
+    width: 400px;
+    height: 250px;
+    border: 4px solid lightcyan;
+}
 
+.item {
+    border: 2px dashed red;
+}
+```
 <h2>grid-template-rows</h2>
 
 <p>명시적 행(Track)의 크기를 정의합니다.<br>동시에 라인(Line)의 이름도 정의할 수 있습니다.<br><code>fr</code>(fraction, 공간 비율) 단위를 사용할 수
