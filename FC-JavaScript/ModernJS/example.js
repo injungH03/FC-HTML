@@ -140,7 +140,10 @@ const dog = {
     name: '멍멍이',
     sound: '멍멍!',
     say: function() { // 함수가 객체안에 들어가게 되면, this 는 자신이 속해있는 객체를 가르키게 됩니다. , 함수를 선언 할 때에는 이름이 없어도 됩니다.
-// say: () -> {  화살표 함수로 선언하면 제대로 작동 안함, 이유는 function 으로 선언한 함수는 this 가 제대로 자신이 속한 객체를 가르키게 되는데, 화살표 함수는 그렇지 않기 때문
+/* 
+say: () -> {  화살표 함수로 선언하면 제대로 작동 안함, 이유는 function 으로 선언한 함수는 this 가 제대로 자신이 속한 객체를 가르키게 되는데, 
+화살표 함수는 그렇지 않기 때문
+ */
       console.log(this.sound);
     }
   };
@@ -149,8 +152,6 @@ const cat = {
     name: '야옹이',
     sound: '야옹~'
 };
-
-
 
 cat.say = dog.say;
 dog.say(); // 멍멍!
@@ -507,3 +508,218 @@ const todos = [
   // const todo = todos.find(todo => todo.id === 3); // find 함수는 findIndex 랑 비슷한데, 찾아낸 값이 몇번째인지 알아내는 것이 아니라, 찾아낸 값 자체를 반환함
   // 결과 값: Object {id: 3, text: "객체와 배열 배우기", done: true}
   console.log(index);
+
+
+
+
+
+  //
+  //
+  // filter
+  // filter 함수는 배열에서 특정 조건을 만족하는 값들만 따로 추출하여 새로운 배열을 만듭니다.
+  const todos = [
+    {
+      id: 1,
+      text: '자바스크립트 입문',
+      done: true
+    },
+    {
+      id: 2,
+      text: '함수 배우기',
+      done: true
+    },
+    {
+      id: 3,
+      text: '객체와 배열 배우기',
+      done: true
+    },
+    {
+      id: 4,
+      text: '배열 내장함수 배우기',
+      done: false
+    }
+  ];
+  
+  const tasksNotDone = todos.filter(todo => todo.done === false);
+  console.log(tasksNotDone);
+// filter 함수에 넣는 파라미터는 조건을 검사하는 함수를 넣어주며, 이 함수의 파라미터로 각 원소의 값을 받아오게 됩니다.
+// const tasksNotDone = todos.filter(todo => !todo.done); 이렇게도 작성가능
+
+//
+// 
+// splice
+// splice 는 배열에서 특정 항목을 제거할 때 사용합니다.  
+const numbers = [10, 20, 30, 40];
+const index = numbers.indexOf(30);
+const spliced = numbers.splice(index, 2);
+console.log(spliced); // [30, 40] 
+console.log(numbers); // [10, 20]
+
+//
+//
+// slice
+// slice 는 splice 랑 조금 비슷하지만, 배열을 잘라낼 때 사용하는데, 중요한 점은 기존의 배열은 건들이지 않는 다는 것입니다.
+const numbers = [10, 20, 30, 40];
+const sliced = numbers.slice(0, 2); // 0부터 시작해서 2전까지
+
+console.log(sliced); // [10, 20]
+console.log(numbers); // [10, 20, 30, 40]
+/*
+slice 에는 두개의 파라미터를 넣게 되는데 첫번째 파라미터는 어디서부터 자를지, 그리고 두번째 파라미터는 어디까지 자를지 를 의미합니다.
+*/
+
+//
+//
+// shift 와 pop
+// shift 는 첫번째 원소를 배열에서 추출해준다 (추출는 과정에서 배열에서 해당 원소는 사라진다.)
+const numbers = [10, 20, 30, 40];
+const value = numbers.shift();
+console.log(value); // 10
+console.log(numbers); // [20, 30, 40]
+
+// pop
+// pop 은 push 의 반대로 생각하면 된다. push 는 배열의 맨 마지막에 새 항목을 추가하고, pop 은 맨 마지막 항목을 추출한다.
+const numbers = [10, 20, 30, 40];
+const value = numbers.pop();
+console.log(value); // 40
+console.log(numbers); // [10, 20, 30]
+
+
+//
+//
+// unshift
+// unshift는 shift의 반대
+// 배열의 맨 앞에 새 원소를 추가한다.
+const numbers = [10, 20, 30, 40];
+numbers.unshift(5);
+console.log(numbers); // [5, 10, 20, 30, 40]
+
+/*
+const numbers = [10, 20, 30, 40];
+numbers.push(50);
+console.log(numbers); // [10, 20, 30, 40, 50]
+
+const numbers = [10, 20, 30, 40];
+numbers.push(50);
+const value = numbers.pop() // 50
+console.log(numbers) // [10, 20, 30, 40]
+*/
+
+/*
+const numbers = [10, 20, 30, 40];
+numbers.unshift(0);
+console.log(numbers); // [0, 10, 20, 30, 40]
+
+const numbers = [10, 20, 30, 40];
+numbers.unshift(0);
+const value = numbers.shift() // [10, 20, 30, 40]
+console.log(numbers); 
+*/
+
+//
+//
+// concat
+// concat 은 여러개의 배열을 하나의 배열로 합쳐준다.
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const concated = arr1.concat(arr2);
+// const concated = [...arr1, ...arr2];
+console.log(concated); // [1, 2, 3, 4, 5, 6];
+
+//concat 함수는 arr1 과 arr2 에 변화를 주지 않는다.
+
+//
+//
+// join
+// join 은 배열 안의 값들을 문자열 형태로 합쳐준다.
+const array = [1, 2, 3, 4, 5];
+console.log(array.join()); // 1,2,3,4,5
+console.log(array.join(' ')); // 1 2 3 4 5
+console.log(array.join(', ')); // 1, 2, 3, 4, 5
+
+//
+//
+// reduce
+// reduce 함수는 잘 사용 할 줄 알면 정말 유용한 내장 함수이다. 만약 주어진 배열에 대하여 총합을 구해야 하는 상황이 왔다고 가정해보자.
+
+const numbers = [1, 2, 3, 4, 5];
+
+let sum = 0;
+numbers.forEach(n => {
+  sum += n;
+});
+console.log(sum); // 15
+// 여기서 sum 을 계산하기 위해서 사전에 sum 을 선언하고, forEach 를 통하여 계속해서 덧셈을 해주었다.
+
+//reduce 라는 함수를 사용하면 다음과 같이 구현 할 수 있다.
+/*
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce((accumulator, current) => accumulator + current, 0);
+*/
+//초기값 0이 accumulator이 되고 각 원소들이 하나씩 current에 들어가서 더 해진다. (더해진 값은 다시 accumulator(누적된 값)이 되서 마지막 원소까지 계속 더해진다.)
+
+/*
+const numbers = [1, 2, 3, 4, 5];
+let sum = numbers.reduce((accumulator, current) => {
+  console.log({ accumulator, current });
+  return accumulator + current;
+}, 0);
+
+console.log(sum);
+*/
+/*
+열을 처음부터 끝까지 반복하면서 우리가 전달한 콜백 함수가 호출이 되는데,
+가장 처음엔 accumulator 값이 0 이다. 이 값이 0인 이유는 우리가 두번째 파라미터인 초깃값으로 0을 설정했기 때문이다.
+처음 콜백 함수가 호출되면, 0 + 1 을 해서 1이 반환된다. 이렇게 1일 반환되면 그 다음 번에 콜백함수가 호출 될 때 accumulator 값으로 사용됨.
+콜백함수가 두번째로 호출 될 땐 1 + 2 를 해서 3이되고, 이 값이 세번째로 호출될 때의 accumulator가 됩니다.
+그래서 쭉- 누적돼서 결과물 15가 나타나는 것 입니다.
+*/
+
+
+
+/*
+reduce 함수에는 두개의 파라미터를 전달한다. 첫번째 파라미터는 accumulator 와 current 를 파라미터로 가져와서 결과를 반환하는 콜백함수이고, 
+두번째 파라미터는 reduce 함수에서 사용 할 초깃값입니다.
+
+여기서 accumulator 는 누적된 값을 의미합니다.
+*/
+
+// 평균을 계산하려면, 가장 마지막 숫자를 더하고 나서 배열의 length 로 나누어주어야 한다.
+const avg = numbers.reduce((accumulator, current, index, array) => { // 평균을 구할 때
+  if (index === array.length - 1){ // 현재 처리하고 있는 배열 원소가 맨 마지막 것이라면, index가 0부터 시작하기 때문에 -1로 해줌
+    return (accumulator + current) / array.length; 
+  }
+  return accumulator + current;
+}, 0); 
+console.log(avg); // 3 
+
+/*
+reduce 에서 사용한 콜백함수에서는 추가 파라미터로 index 와 array 를 받아왔다.
+index 는 현재 처리하고 있는 항목이 몇번째인지 가르키고, array 는 현재 처리하고 있는 배열 자신을 의미함
+*/
+
+const alphabets = ['a', 'a', 'a', 'a', 'b', 'c', 'c', 'd', 'e'];
+const counts = alphabets.reduce((acc, current) => {
+  if (acc[current]) { // acc 안에 존재하는지 확인
+    acc[current] += 1; // acc 안에 current가 존재한다면 값에다가 1을 더해준다.
+  } else {
+    acc[current] = 1; // 그렇지 않다면 acc[current]를 1로 설정해준다.
+  }
+  return acc;
+}, {}) // 여기서 {}은 비어있는 객체
+
+console.log(counts);
+
+/*
+Object {a: 3, b: 1, c: 2, d: 1, e: 1}
+
+*/
+
+
+
+
+
+
+
+
+
