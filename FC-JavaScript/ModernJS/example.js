@@ -35,25 +35,25 @@ console.log(sum);
 
 // 점수를 성적등급으로 변환하기 , 이번에는 점수가 주어졌을 때 A, B, C, D, F 등급을 반환하는 함수를 만들어봅시다.
 function getGrade(score) {
-    if (score === 100) {
-        return 'A+';
-    } else if (score >= 90) {
-        return 'A';
-    } else if (score === 89) {
-        return 'B+';
-    } else if (score >= 80) {
-        return 'B';
-    } else if (score === 79 ) {
-        return 'C+';
-    } else if (score >= 70) {
-        return 'C';
-    } else if (score === 69) {
-        return 'D+'
-    } else if (score >= 60) {
-        return 'D'
-    } else {
-        return 'F';
-    }
+  if (score === 100) {
+    return 'A+';
+  } else if (score >= 90) {
+    return 'A';
+  } else if (score === 89) {
+    return 'B+';
+  } else if (score >= 80) {
+    return 'B';
+  } else if (score === 79) {
+    return 'C+';
+  } else if (score >= 70) {
+    return 'C';
+  } else if (score === 69) {
+    return 'D+'
+  } else if (score >= 60) {
+    return 'D'
+  } else {
+    return 'F';
+  }
 }
 
 const grade = getGrade(30);
@@ -72,28 +72,28 @@ console.log(add(1, 2));
 */
 
 const getGrade = score => {
-    if (score === 100) {
-      return 'A+';
-    } else if (score >= 90) {
-      return 'A';
-    } else if (score === 89) {
-      return 'B+';
-    } else if (score >= 80) {
-      return 'B';
-    } else if (score === 79) {
-      return 'C+';
-    } else if (score >= 70) {
-      return 'C';
-    } else if (score === 69) {
-      return 'D+';
-    } else if (score >= 60) {
-      return 'D';
-    } else {
-      return 'F';
-    }
-  };
-  const grade = getGrade(90);
-  console.log(grade);
+  if (score === 100) {
+    return 'A+';
+  } else if (score >= 90) {
+    return 'A';
+  } else if (score === 89) {
+    return 'B+';
+  } else if (score >= 80) {
+    return 'B';
+  } else if (score === 79) {
+    return 'C+';
+  } else if (score >= 70) {
+    return 'C';
+  } else if (score === 69) {
+    return 'D+';
+  } else if (score >= 60) {
+    return 'D';
+  } else {
+    return 'F';
+  }
+};
+const grade = getGrade(90);
+console.log(grade);
 
 
 
@@ -105,9 +105,9 @@ const getGrade = score => {
 //
 // 함수에서 객체를 파라미터로 받기
 const ironMan = {
-    name: '토니 스타크',
-    actor: '로버트 다우니 주니어',
-    alias: '아이언맨'
+  name: '토니 스타크',
+  actor: '로버트 다우니 주니어',
+  alias: '아이언맨'
 };
 
 // const { name } = ironMan;
@@ -115,16 +115,20 @@ const ironMan = {
 // 토니 스타크
 
 const captainAmerica = {
-    name: '스티븐 로저스',
-    actor: '크리스 에반스',
-    alias: '캡틴 아메리카'
+  name: '스티븐 로저스',
+  actor: '크리스 에반스',
+  alias: '캡틴 아메리카'
 };
 
-function print({ alias, name, actor }) { // function print(hero) { - 1번 //  print({ alias, name, actor }) - 3번 
-    // const { alias, name, actor } = hero; - 2번
-    const text = `${alias}(${name}) 역할을 맡은 배우는 ${actor} 입니다.`; // 객체 비구조화 할당(객체 구조 분해)
-    // const text = `${hero.alias}(${hero.name}) 역할을 맡은 배우는 ${hero.actor} 입니다.`;
-    console.log(text);
+function print({
+  alias,
+  name,
+  actor
+}) { // function print(hero) { - 1번 //  print({ alias, name, actor }) - 3번 
+  // const { alias, name, actor } = hero; - 2번
+  const text = `${alias}(${name}) 역할을 맡은 배우는 ${actor} 입니다.`; // 객체 비구조화 할당(객체 구조 분해)
+  // const text = `${hero.alias}(${hero.name}) 역할을 맡은 배우는 ${hero.actor} 입니다.`;
+  console.log(text);
 }
 
 print(ironMan);
@@ -137,20 +141,20 @@ print(captainAmerica);
 //
 // 객체 안에 함수 넣기 
 const dog = {
-    name: '멍멍이',
-    sound: '멍멍!',
-    say: function() { // 함수가 객체안에 들어가게 되면, this 는 자신이 속해있는 객체를 가르키게 됩니다. , 함수를 선언 할 때에는 이름이 없어도 됩니다.
-/* 
-say: () -> {  화살표 함수로 선언하면 제대로 작동 안함, 이유는 function 으로 선언한 함수는 this 가 제대로 자신이 속한 객체를 가르키게 되는데, 
-화살표 함수는 그렇지 않기 때문
- */
-      console.log(this.sound);
-    }
-  };
-   
+  name: '멍멍이',
+  sound: '멍멍!',
+  say: function () { // 함수가 객체안에 들어가게 되면, this 는 자신이 속해있는 객체를 가르키게 됩니다. , 함수를 선언 할 때에는 이름이 없어도 됩니다.
+    /* 
+    say: () -> {  화살표 함수로 선언하면 제대로 작동 안함, 이유는 function 으로 선언한 함수는 this 가 제대로 자신이 속한 객체를 가르키게 되는데, 
+    화살표 함수는 그렇지 않기 때문
+     */
+    console.log(this.sound);
+  }
+};
+
 const cat = {
-    name: '야옹이',
-    sound: '야옹~'
+  name: '야옹이',
+  sound: '야옹~'
 };
 
 cat.say = dog.say;
@@ -165,15 +169,15 @@ catSay(); // undefined
 //
 
 const dog = {
-    _name: '멍멍이',
-    get name() {
-        console.log('_name을 조회합니다..');
-        return this._name;
-    },
-    set name(value) {
-        console.log('이름이 바뀝니다..' + value);
-        this._name = value;
-    }
+  _name: '멍멍이',
+  get name() {
+    console.log('_name을 조회합니다..');
+    return this._name;
+  },
+  set name(value) {
+    console.log('이름이 바뀝니다..' + value);
+    this._name = value;
+  }
 };
 
 console.log(dog.name);
@@ -192,29 +196,29 @@ console.log(dog.name);
 // Getter 함수는 특정 값을 조회 할 때 우리가 설정한 함수로 연산된 값을 반환합니다.
 
 const numbers = {
-    _a: 1,
-    _b: 2,
-    sum: 3,
-    calculate() {
-        console.log('calculate');
-        this.sum = this._a + this._b;
-    },
-    get a() {
-        return this._a;
-    },
-    get b() {
-        return this._b;
-    },
-    set a(value) {
-        console.log('a가 바뀝니다.');
-        this._a = value; 
-        this.calculate();
-    },
-    set b(value) {
-        console.log('b가 바뀝니다.');
-        this._b = value;
-        this.calculate();
-    }
+  _a: 1,
+  _b: 2,
+  sum: 3,
+  calculate() {
+    console.log('calculate');
+    this.sum = this._a + this._b;
+  },
+  get a() {
+    return this._a;
+  },
+  get b() {
+    return this._b;
+  },
+  set a(value) {
+    console.log('a가 바뀝니다.');
+    this._a = value;
+    this.calculate();
+  },
+  set b(value) {
+    console.log('b가 바뀝니다.');
+    this._b = value;
+    this.calculate();
+  }
 };
 
 console.log(numbers.sum); // 3
@@ -230,7 +234,11 @@ console.log(numbers.sum); // 16
 // 배열
 // 배열에 새로운 항목을 추가 할 때에는 배열이 지니고있는 내장 함수인 push 함수를 사용합니다.
 
-const objects = [{ name: '멍멍이' }, { name: '야옹이' }];
+const objects = [{
+  name: '멍멍이'
+}, {
+  name: '야옹이'
+}];
 
 console.log(objects.length);
 
@@ -311,11 +319,11 @@ i 가 5 일땐 break 를하여 반복문을 종료시킵니다.
 
 // numbers 라는 배열을 파라미터로 받아서 총합을 구하는 함수를 만들어봅시다.
 function sumOf(numbers) {
-    let sum = 0; // 초기 합은 0부터 시작
-    for (let i = 0; i < numbers.length; i++) { // i가 numbers.length보다 작을 때까지 반복
-        sum += numbers[i]; // sum에 하나하나 더해서
-    }
-    return sum;
+  let sum = 0; // 초기 합은 0부터 시작
+  for (let i = 0; i < numbers.length; i++) { // i가 numbers.length보다 작을 때까지 반복
+    sum += numbers[i]; // sum에 하나하나 더해서
+  }
+  return sum;
 }
 
 const result = sumOf([1, 2, 3, 4, 5]);
@@ -390,7 +398,7 @@ const superheroes = ['아이언맨', '캡틴 아메리카', '토르', '닥터 �
 
 // 3 
 superheroes.forEach(hero => {
-    console.log(hero);
+  console.log(hero);
 });
 
 /*
@@ -418,7 +426,7 @@ const array = [1, 2, 3, 4, 5, 6, 7, 8];
 
 const squared = [];
 for (let i = 0; i < array.length; i++) {
-    squared.push(array[i] * array[i]);
+  squared.push(array[i] * array[i]);
 }
 
 console.log(squared);
@@ -427,7 +435,7 @@ console.log(squared);
 const array = [1, 2, 3, 4, 5, 6, 7, 8];
 
 array.forEach(n => { // 숫자 n에 대하여
-    squared.push(n * n);
+  squared.push(n * n);
 });
 
 console.log(squared);
@@ -457,15 +465,14 @@ console.log(squared);
 
 // [1, 4, 9, 16, 25, 36, 49, 64];
 
-const items = [
-    {
-        id: 1,
-        text: 'hello'
-    },
-    {
-        id: 2,
-        text: 'bye'
-    }
+const items = [{
+    id: 1,
+    text: 'hello'
+  },
+  {
+    id: 2,
+    text: 'bye'
+  }
 ];
 
 const texts = items.map(item => item.text);
@@ -480,68 +487,66 @@ const superheroes = ['아이언맨', '캡틴 아메리카', '토르', '닥터 �
 
 
 //
-const todos = [
-    {
-      id: 1,
-      text: '자바스크립트 입문',
-      done: true
-    },
-    {
-      id: 2,
-      text: '함수 배우기',
-      done: true
-    },
-    {
-      id: 3,
-      text: '객체와 배열 배우기',
-      done: true
-    },
-    {
-      id: 4,
-      text: '배열 내장함수 배우기',
-      done: false
-    }
-  ];
+const todos = [{
+    id: 1,
+    text: '자바스크립트 입문',
+    done: true
+  },
+  {
+    id: 2,
+    text: '함수 배우기',
+    done: true
+  },
+  {
+    id: 3,
+    text: '객체와 배열 배우기',
+    done: true
+  },
+  {
+    id: 4,
+    text: '배열 내장함수 배우기',
+    done: false
+  }
+];
 
-  // const index = todos.indexOf(3); // -1 일치하는 것이 없다. 여기서 id: 3을 찾고 싶으면 findIndex를 사용해야함
-  const index = todos.findIndex(todo => todo.id === 3); // 결과값: 2
-  // const todo = todos.find(todo => todo.id === 3); // find 함수는 findIndex 랑 비슷한데, 찾아낸 값이 몇번째인지 알아내는 것이 아니라, 찾아낸 값 자체를 반환함
-  // 결과 값: Object {id: 3, text: "객체와 배열 배우기", done: true}
-  console.log(index);
-
+// const index = todos.indexOf(3); // -1 일치하는 것이 없다. 여기서 id: 3을 찾고 싶으면 findIndex를 사용해야함
+const index = todos.findIndex(todo => todo.id === 3); // 결과값: 2
+// const todo = todos.find(todo => todo.id === 3); // find 함수는 findIndex 랑 비슷한데, 찾아낸 값이 몇번째인지 알아내는 것이 아니라, 찾아낸 값 자체를 반환함
+// 결과 값: Object {id: 3, text: "객체와 배열 배우기", done: true}
+console.log(index);
 
 
 
 
-  //
-  //
-  // filter
-  // filter 함수는 배열에서 특정 조건을 만족하는 값들만 따로 추출하여 새로운 배열을 만듭니다.
-  const todos = [
-    {
-      id: 1,
-      text: '자바스크립트 입문',
-      done: true
-    },
-    {
-      id: 2,
-      text: '함수 배우기',
-      done: true
-    },
-    {
-      id: 3,
-      text: '객체와 배열 배우기',
-      done: true
-    },
-    {
-      id: 4,
-      text: '배열 내장함수 배우기',
-      done: false
-    }
-  ];
-  
-  const tasksNotDone = todos.filter(todo => todo.done === false);
-  console.log(tasksNotDone);
+
+//
+//
+// filter
+// filter 함수는 배열에서 특정 조건을 만족하는 값들만 따로 추출하여 새로운 배열을 만듭니다.
+const todos = [{
+    id: 1,
+    text: '자바스크립트 입문',
+    done: true
+  },
+  {
+    id: 2,
+    text: '함수 배우기',
+    done: true
+  },
+  {
+    id: 3,
+    text: '객체와 배열 배우기',
+    done: true
+  },
+  {
+    id: 4,
+    text: '배열 내장함수 배우기',
+    done: false
+  }
+];
+
+const tasksNotDone = todos.filter(todo => todo.done === false);
+console.log(tasksNotDone);
 // filter 함수에 넣는 파라미터는 조건을 검사하는 함수를 넣어주며, 이 함수의 파라미터로 각 원소의 값을 받아오게 됩니다.
 // const tasksNotDone = todos.filter(todo => !todo.done); 이렇게도 작성가능
 
@@ -686,11 +691,11 @@ reduce 함수에는 두개의 파라미터를 전달한다. 첫번째 파라미�
 
 // 평균을 계산하려면, 가장 마지막 숫자를 더하고 나서 배열의 length 로 나누어주어야 한다.
 const avg = numbers.reduce((accumulator, current, index, array) => { // 평균을 구할 때
-  if (index === array.length - 1){ // 현재 처리하고 있는 배열 원소가 맨 마지막 것이라면, index가 0부터 시작하기 때문에 -1로 해줌
-    return (accumulator + current) / array.length; 
+  if (index === array.length - 1) { // 현재 처리하고 있는 배열 원소가 맨 마지막 것이라면, index가 0부터 시작하기 때문에 -1로 해줌
+    return (accumulator + current) / array.length;
   }
   return accumulator + current;
-}, 0); 
+}, 0);
 console.log(avg); // 3 
 
 /*
@@ -714,12 +719,3 @@ console.log(counts);
 Object {a: 3, b: 1, c: 2, d: 1, e: 1}
 
 */
-
-
-
-
-
-
-
-
-
